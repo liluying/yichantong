@@ -1,0 +1,9 @@
+build/
+**/build/
+**/__pycache__/
+*.pyc
+*.keystore
+*.jks
+*.p12
+*.pfx
+tools/test-venv/

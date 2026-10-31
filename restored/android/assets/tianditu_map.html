@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>天地图</title>
+    <script type="text/javascript" src="https://api.tianditu.gov.cn/api?v=4.0&tk=820010c033d438c491b5f38fd6d60ae5"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        #mapDiv {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="mapDiv"></div>
+<script>
+    var map;
+    var zoom = 16;
+    var marker = null; // 当前标记点
+    var breathingMarker = null; // 呼吸效果圆点
+    var breathingAnimation = null; // 呼吸动画定时器
+    //用于存储自定义标记和路线
+    var customMarkers = []; // 存储自定义标记
+    var routePolylines = []; // 连接线
+    var startMarker = null; // 起点标记
+    var endMarker = null; // 终点标记
+    var lastUpdateTime = 0; // 上次更新时间戳
+    var updateThrottleInterval = 1000; // 1秒节流间隔（move=false时）
+
+    function initMap(initLng, initLat, initZoom) {
+        try {
+            // 确保T对象已加载
+            if (typeof T === 'undefined') {
+                console.error('天地图API未加载');
+                return;
+            }
+            //使用传入的参数或默认值
+            var lng = typeof initLng !== 'undefined' ? initLng : 116.40769;
+            var lat = typeof initLat !== 'undefined' ? initLat : 39.89945;
+            var zoomLevel = typeof initZoom !== 'undefined' ? initZoom : 16;
+
+            map = new T.Map('mapDiv', {projection: 'EPSG:4326'});//EPSG:900913(墨卡托投影)，EPSG:4326(wgs84坐标系)
+            map.centerAndZoom(new T.LngLat(lng, lat), zoomLevel);
+            map.enableDrag();
+            // 添加缩放控件
+            //map.addControl(new T.Control.Zoom());
+
+            // 添加比例尺
+            map.addControl(new T.Control.Scale());
+
+            console.log('天地图初始化成功');
+
+            //回调给Android使用
+            if(window.AndroidInterface){
+                window.AndroidInterface.onInitResult(true);
+                console.log('回调Android onInitResult 接口 完成');
+            }
+
+        } catch (e) {
+            console.error('地图初始化失败:', e);
+            document.getElementById('mapDiv').innerHTML = '<div style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; text-align: center;">地图加载失败: ' + e.message + '</div>';
+        }
+    }
+
+   //地图中心移到指定位置
+   function centerLocation(lng, lat) {
+        map.centerAndZoom(new T.LngLat(lng, lat), zoom);
+   }
+
+    /**
+     * 更新地图到指定坐标
+     * @param {number} lng - 经度
+     * @param {number} lat - 纬度
+     * @param {boolean} move - 是否平移地图
+     */
+    function updatePosition(lng, lat, move) {
+        try {
+            if (typeof T === 'undefined' || !map) {
+                console.error('天地图API未初始化');
+                return false;
+            }
+
+            var currentTime = Date.now();
+            var interval = currentTime - lastUpdateTime;
+            // 当move=false时，实现1秒节流机制
+            if (!move) {
+                if (currentTime - lastUpdateTime < updateThrottleInterval) {
+                    //console.log('跳过更新：距离上次更新不足1秒');
+                    return true;
+                }
+                lastUpdateTime = currentTime;
+            } else {
+                // move=true时，立即更新并重置计时器
+                lastUpdateTime = currentTime;
+            }
+
+            // 创建新的经纬度对象
+            var lnglat = new T.LngLat(lng, lat);
+
+            // 更新地图中心点
+            if (move) {
+                map.centerAndZoom(lnglat, zoom);
+            } else {
+                map.lngLatToContainerPoint(lnglat);
+            }
+
+            // 移除之前的标记点
+            if (marker) {
+                map.removeOverLay(marker);
+            }
+            // 移除之前的标记点和呼吸效果
+            if (marker) {
+                map.removeOverLay(marker);
+            }
+            if (breathingMarker) {
+                map.removeOverLay(breathingMarker);
+                breathingMarker = null;
+            }
+            if (breathingAnimation) {
+                clearInterval(breathingAnimation);
+                breathingAnimation = null;
+            }
+
+            // 创建定位圆点标记（内圆）
+            var icon = new T.Icon({
+                iconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%230099ff' stroke='%23ffffff' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%230099ff'/%3E%3C/svg%3E",
+                iconSize: new T.Point(24, 24),
+                iconAnchor: new T.Point(12, 12)
+            });
+            // 添加新的标记点
+            marker = new T.Marker(lnglat, {icon: icon});
+            map.addOverLay(marker);
+
+            // 创建呼吸效果外圆
+            createBreathingEffect(lnglat);
+            //console.log('位置已更新到: ' + lng + ', ' + lat + ', move=' + move + ', 节流间隔=' + interval + 'ms');
+            return true;
+        } catch (e) {
+            console.error('更新位置失败:', e);
+            return false;
+        }
+    }
+
+    /**
+     * 根据标签生成挖沟样式的圆点图标
+     */
+    function createPointMarkerIcon(label) {
+        var fill = '%238B4513';
+        if (label === 'A') {
+            fill = '%230000FF';
+        } else if (label === 'B') {
+            fill = '%23FF0000';
+        } else if (label === 'C') {
+            fill = '%2328D25C';
+        }
+        return new T.Icon({
+            iconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='" + fill + "' stroke='%23FFFFFF' stroke-width='2'/%3E%3Ctext x='12' y='16' font-size='12' text-anchor='middle' fill='%23FFFFFF' font-family='Arial' font-weight='bold'%3E" + label + "%3C/text%3E%3C/svg%3E",
+            iconSize: new T.Point(24, 24),
+            iconAnchor: new T.Point(12, 12)
+        });
+    }
+
+    /**
+     * 添加多个标记点及连线
+     * @param {Array} pointsList - 坐标点数组，每个元素为 [lng, lat] 或 {lng: x, lat: y}
+     * @param {Array} labelsList - 可选标签数组，如 ['A', 'B', 'C']
+     */
+    function addMultiPointsAndRoute(linkTogether, pointsList, labelsList) {
+        // 检查地图是否已初始化
+        if (typeof T === 'undefined' || !map) {
+            console.error('天地图未初始化');
+            return;
+        }
+
+        // 检查参数是否有效
+        if (!pointsList || !Array.isArray(pointsList) || pointsList.length === 0) {
+            console.error('无效的坐标点列表');
+            return;
+        }
+
+        try {
+            // 清除现有的标记和路线
+            clearMarkersAndRoute();
+
+            var routePoints = [];
+
+            // 遍历所有坐标点
+            for (var i = 0; i < pointsList.length; i++) {
+                var point = pointsList[i];
+                var lng, lat;
+
+                // 处理不同格式的坐标点
+                if (Array.isArray(point)) {
+                    // 数组格式：[lng, lat]
+                    lng = point[0];
+                    lat = point[1];
+                } else if (point.lng && point.lat) {
+                    // 对象格式：{lng: x, lat: y}
+                    lng = point.lng;
+                    lat = point.lat;
+                } else {
+                    console.warn('跳过无效坐标点:', point);
+                    continue;
+                }
+
+                // 创建并添加带序号的圆点标记
+                var markerPoint = new T.LngLat(lng, lat);
+                var label = (labelsList && labelsList[i]) ? labelsList[i] : ('P' + (i + 1));
+                var circleIcon;
+                if (labelsList && labelsList[i]) {
+                    circleIcon = createPointMarkerIcon(label);
+                } else {
+                    circleIcon = new T.Icon({
+                        iconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ccircle cx='10' cy='10' r='9' fill='%238B4513' stroke='%23ffffff' stroke-width='1.5'/%3E%3Ctext x='10' y='14' font-size='10' text-anchor='middle' fill='%23ffffff' font-family='Arial' font-weight='bold'%3E" + label + "%3C/text%3E%3C/svg%3E",
+                        iconSize: new T.Point(20, 20),
+                        iconAnchor: new T.Point(10, 10)
+                    });
+                }
+                var pointMarker = new T.Marker(markerPoint, {icon: circleIcon});
+                map.addOverLay(pointMarker);
+                customMarkers.push(pointMarker);
+                routePoints.push(markerPoint);
+
+                console.log('添加标记点 ' + (i + 1) + ': ' + lng + ', ' + lat);
+            }
+            if (linkTogether) {
+
+                // 所有点互相连接
+                for (var i = 0; i < routePoints.length; i++) {
+                    for (var j = i + 1; j < routePoints.length; j++) {
+
+                        var line = new T.Polyline(
+                            [routePoints[i], routePoints[j]],
+                            {
+                                color: "#8B4513",
+                                weight: 3,
+                                opacity: 1,
+                                enableMassClear: false,
+                                enableEditing: false,
+                                enableClicking: false
+                            }
+                        );
+                        map.addOverLay(line);
+                        routePolylines.push(line);
+                    }
+                }
+
+            } else {
+
+                // 如果有多于 1 个点，绘制连线
+                if (routePoints.length > 1) {
+                    var polyline = new T.Polyline(routePoints, {
+                        color: "#8B4513",
+                        weight: 3,
+                        opacity: 1,
+                        enableMassClear: false,
+                        enableEditing: false,
+                        enableClicking: false
+                    });
+                    map.addOverLay(polyline);
+                    routePolylines.push(polyline);
+                    console.log('多点连线已添加，共 ' + routePoints.length + '个点');
+                }
+            }
+
+        } catch (e) {
+            console.error('添加多点及路线失败:', e);
+        }
+    }
+
+    /**
+     * 添加单个标记或起点终点连线
+     * @param {number} lng -  起点经度
+     * @param {number} lat -  起点纬度
+     * @param {number} lng2 - 终点经度（可不传）
+     * @param {number} lat2 - 终点纬度（可不传）
+     */
+    function addMarkerOrRoute(lng, lat, lng2, lat2) {
+        // 检查地图是否已初始化
+        if (typeof T === 'undefined' || !map) {
+            console.error('天地图未初始化');
+            return;
+        }
+        // 清除现有的标记和路线
+        clearMarkersAndRoute();
+
+        try {
+            //检查是否都传入了起点和终点
+            if (lng && lat && lng2 && lat2) {
+                // 如果是数组，检查是否包含两个坐标点
+                // 处理起点终点模式
+                    var startPoint = new T.LngLat(lng, lat);
+                    var endPoint = new T.LngLat(lng2, lat2);
+
+                    // 创建起点标记
+                    var startIcon = new T.Icon({
+                        iconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%230000FF' stroke='%23FFFFFF' stroke-width='2'/%3E%3Ctext x='12' y='16' font-size='12' text-anchor='middle' fill='%23FFFFFF' font-family='Arial'>A</text%3E%3C/svg%3E",
+                        iconSize: new T.Point(24, 24),
+                        iconAnchor: new T.Point(12, 12)
+                    });
+                    startMarker = new T.Marker(startPoint, {icon: startIcon});
+                    map.addOverLay(startMarker);
+
+                    // 创建终点标记
+                    var endIcon = new T.Icon({
+                        iconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23FF0000' stroke='%23FFFFFF' stroke-width='2'/%3E%3Ctext x='12' y='16' font-size='12' text-anchor='middle' fill='%23FFFFFF' font-family='Arial'>B</text%3E%3C/svg%3E",
+                        iconSize: new T.Point(24, 24),
+                        iconAnchor: new T.Point(12, 12)
+                    });
+                    endMarker = new T.Marker(endPoint, {icon: endIcon});
+                    map.addOverLay(endMarker);
+
+                    // 绘制连接线
+                    var routePoints = [startPoint, endPoint];
+                    var polyline = new T.Polyline(routePoints, {
+                        color: "#8B4513",
+                        weight: 3,
+                        opacity: 1, //不透明
+                        enableMassClear: false, // 防止被清除
+                        enableEditing: false,
+                        enableClicking: false
+                    });
+                    map.addOverLay(polyline);
+                    routePolylines.push(polyline);
+
+                    console.log('起点终点连线已添加: S(' + lng + ', ' + lat + ') -> E(' + lng2 + ', ' + lat2 + ')');
+            } else if(lng && lat){
+                // 单个坐标点模式
+                var singlePoint = new T.LngLat(lng, lat);
+
+                // 清除现有的标记（但保留路线，因为可能只是添加额外标记）
+                if (startMarker) {
+                    map.removeOverLay(startMarker);
+                    startMarker = null;
+                }
+                if (endMarker) {
+                    map.removeOverLay(endMarker);
+                    endMarker = null;
+                }
+                var singleIcon = new T.Icon({
+                    iconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23FF0000' stroke='%23FFFFFF' stroke-width='2'/%3E%3C/svg%3E",
+                    iconSize: new T.Point(24, 24),
+                    iconAnchor: new T.Point(12, 12)
+                });
+
+                var markerStart = new T.Marker(singlePoint, {icon: singleIcon});
+                map.addOverLay(markerStart);
+
+                // 保存到自定义标记数组
+                customMarkers.push(markerStart);
+
+                console.log('单个标记已添加: ' + lng + ', ' + lat);
+            }
+        } catch (e) {
+            console.error('添加标记或路线失败:', e);
+        }
+    }
+
+     /**
+     * 清除所有标记和路线
+     */
+    function clearMarkersAndRoute() {
+        // 检查地图是否已初始化
+        if (typeof T === 'undefined' || !map) {
+            console.error('天地图未初始化');
+            return;
+        }
+
+        try {
+            // 清除自定义标记
+            for (var i = 0; i < customMarkers.length; i++) {
+                map.removeOverLay(customMarkers[i]);
+            }
+            customMarkers = [];
+
+            // 清除起点终点标记
+            if (startMarker) {
+                map.removeOverLay(startMarker);
+                startMarker = null;
+            }
+            if (endMarker) {
+                map.removeOverLay(endMarker);
+                endMarker = null;
+            }
+
+            // 清除路线
+            for (var i = 0; i < routePolylines.length; i++) {
+                map.removeOverLay(routePolylines[i]);
+            }
+            routePolylines = [];
+
+            // 停止呼吸效果
+            stopBreathingEffect();
+
+            console.log('已清空所有标记和路线');
+        } catch (e) {
+            console.error('清空标记和路线失败:', e);
+        }
+    }
+
+    /**
+     * 创建呼吸效果
+     * @param {T.LngLat} lnglat - 经纬度坐标
+     */
+    function createBreathingEffect(lnglat) {
+        try {
+            var scale = 1.0;
+            var opacity = 0.5; //透明度
+            var growing = true;
+            var baseSize = 30; // 基础大小
+            var maxScale = 2; // 最大缩放倍数
+            var minOpacity = 0.5; // 最小透明
+            var maxOpacity = 0.0; // 最大透明度
+
+            // 创建呼吸效果圆点
+            function updateBreathingCircle() {
+                // 移除之前的呼吸效果圆点
+                if (breathingMarker) {
+                    map.removeOverLay(breathingMarker);
+                }
+
+                // 计算当前大小和透明度
+                var currentSize = baseSize * scale;
+                var currentOpacity = opacity;
+
+                // 创建SVG图标
+                var svgIcon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='" + currentSize + "' height='" + currentSize + "' viewBox='0 0 " + currentSize + " " + currentSize + "'%3E%3Ccircle cx='" + (currentSize/2) + "' cy='" + (currentSize/2) + "' r='" + (currentSize/2 - 2) + "' fill='%230099ff' stroke='%23ffffff' stroke-width='0' fill-opacity='" + currentOpacity + "'/%3E%3C/svg%3E";
+
+                var breathingIcon = new T.Icon({
+                    iconUrl: svgIcon,
+                    iconSize: new T.Point(currentSize, currentSize),
+                    iconAnchor: new T.Point(currentSize/2, currentSize/2)
+                });
+
+                breathingMarker = new T.Marker(lnglat, {icon: breathingIcon});
+                map.addOverLay(breathingMarker);
+
+                // 更新缩放和透明度
+                if (growing) {
+                    scale += 0.05;//
+                    opacity -= 0.04; // 放慢透明度变化速度，从0.5渐变到0.0
+                    if (scale >= maxScale) {
+                        growing = false;
+                    }
+                } else {
+                    scale -= 0.05; //
+                    opacity += 0.04; // 放慢透明度变化速度，从0.0渐变到0.5
+                    if (scale <= 1.0) {
+                        growing = true;
+                    }
+                }
+
+                // 确保透明度在合理范围内
+                opacity = Math.min(minOpacity, Math.max(maxOpacity, opacity));
+            }
+
+            // 立即显示第一个圆点
+            updateBreathingCircle();
+
+            // 设置定时器更新呼吸效果，放慢动画速度
+            breathingAnimation = setInterval(updateBreathingCircle, 80);
+            
+        } catch (e) {
+            console.error('创建呼吸效果失败:', e);
+        }
+    }
+
+    /**
+     * 停止呼吸效果
+     */
+    function stopBreathingEffect() {
+        if (breathingAnimation) {
+            clearInterval(breathingAnimation);
+            breathingAnimation = null;
+        }
+        if (breathingMarker) {
+            map.removeOverLay(breathingMarker);
+            breathingMarker = null;
+        }
+    }
+
+    /**
+     * 获取当前地图中心点
+     * @returns {Object} 包含lng和lat属性的对象
+     */
+    function getCurrentCenter() {
+        try {
+            if (typeof T === 'undefined' || !map) {
+                console.error('天地图API未初始化');
+                return null;
+            }
+
+            var center = map.getCenter();
+            return {
+                lng: center.lng,
+                lat: center.lat
+            };
+        } catch (e) {
+            console.error('获取中心点失败:', e);
+            return null;
+        }
+    }
+
+    /**
+     * 重置节流计时器
+     * 用于外部调用强制下次updatePosition立即执行
+     */
+    function resetThrottleTimer() {
+        lastUpdateTime = 0;
+        console.log('节流计时器已重置');
+    }
+
+    /**
+     * 设置节流间隔时间
+     * @param {number} interval - 节流间隔时间（毫秒）
+     */
+    function setThrottleInterval(interval) {
+        if (interval > 0) {
+            updateThrottleInterval = interval;
+            console.log('节流间隔已设置为: ' + interval + 'ms');
+        }
+    }
+
+    // 等待页面完全加载后初始化地图
+    window.onload = function() {
+        // 延迟加载，确保API完全加载
+        setTimeout(initMap, 500);
+    };
+
+    // 将函数暴露到 window 对象，以便外部调用
+    window.TiandituMap = {
+        centerLocation: centerLocation,
+        updatePosition: updatePosition,
+        addMarkerOrRoute: addMarkerOrRoute,
+        addMultiPointsAndRoute: addMultiPointsAndRoute,
+        getCurrentCenter: getCurrentCenter,
+        stopBreathingEffect: stopBreathingEffect,
+        createBreathingEffect: createBreathingEffect,
+        resetThrottleTimer: resetThrottleTimer,
+        setThrottleInterval: setThrottleInterval
+    };
+</script>
+</body>
+</html>

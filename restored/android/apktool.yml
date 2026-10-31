@@ -1,0 +1,13 @@
+version: 2.12.1
+apkFileName: analysis-unpacked.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 28
+packageInfo:
+  forcedPackageId: 127
+versionInfo:
+  versionCode: 82
+  versionName: 2.0.2609.109

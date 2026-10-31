@@ -1,0 +1,47 @@
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Temurin-21.0.8+9 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.8+9 (build 21.0.8+9-LTS, mixed mode)
+INFO  Using log config file: jar:file:/workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1045 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (2136 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Jython/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/yct-restored/scripts/ghidra
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Opening existing project: /workspace/apk-analysis/tools/ghidra-projects/excavator (HeadlessAnalyzer)  
+INFO  Opening project: /workspace/apk-analysis/tools/ghidra-projects/excavator (HeadlessProject)  
+INFO  REPORT: Processing project file: /libexcavator.so (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/yct-restored/scripts/ghidra/RecoverExcavatorTypes.java (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/yct-restored/scripts/ghidra/ExportAlgorithms.java (HeadlessAnalyzer)  
+INFO  ExportAlgorithms.java> EXPORT_RESULT ok=243 failed=0 skipped=32 (GhidraScript)  
+INFO  REPORT: Save succeeded for processed file: /libexcavator.so (HeadlessAnalyzer)  

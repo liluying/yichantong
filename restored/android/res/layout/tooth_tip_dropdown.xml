@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/root" android:background="@drawable/bg_ripple_round_gray_light" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivICon" android:layout_width="40.0dip" android:layout_height="30.0dip" android:src="@drawable/icon_tooth_middle_sel" android:scaleType="fitXY" android:layout_marginStart="10.0dip" />
+    <com.qianhe.yct.view.MarqueeTextView android:textSize="22.0dip" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tvTooth" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/center_tooth" android:singleLine="true" android:layout_weight="1.0" android:layout_marginStart="5.0dip" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_arrow_down_big" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" />
+</LinearLayout>

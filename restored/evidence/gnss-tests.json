@@ -1,0 +1,11 @@
+{
+  "passed_cases": 840,
+  "failed_cases": 0,
+  "functions": [
+    "FourParamTransform",
+    "SevenParamTransform",
+    "ComputeFourParameters"
+  ],
+  "method": "Original ARM64 libyctdevice.so numeric paths versus compiled C",
+  "limits": "Scale-zero/degenerate logging paths and seven-parameter estimation are not covered"
+}

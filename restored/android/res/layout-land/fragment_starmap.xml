@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.github.mikephil.charting.charts.RadarChart android:id="@id/radarChart" android:layout_width="0.0dip" android:layout_height="wrap_content" android:minHeight="400.0dip" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:paddingStart="15.0dip" android:paddingEnd="15.0dip">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lltBDS" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/ivBDS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/green_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BDS" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lltGPS" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dip">
+                    <ImageView android:id="@id/ivGPS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/blue_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lltGLN" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dip">
+                    <ImageView android:id="@id/ivGLN" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/red_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GLN" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lltGAL" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dip">
+                    <ImageView android:id="@id/ivGAL" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/purple_200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GAL" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:paddingStart="20.0dip" android:paddingEnd="15.0dip">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lltQZSS" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:id="@id/ivQZSS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/teal_200" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QZSS" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lltSBAS" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dip">
+                    <ImageView android:id="@id/ivSBAS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/orange" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SBAS" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/lltIRNSS" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dip">
+                    <ImageView android:id="@id/ivIRNSS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/yellow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IRNSS" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.8" android:layout_marginStart="20.0dip">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_checkbox" />
+                    <TextView android:textSize="18.0dip" android:textColor="@color/yellow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="占位" android:layout_marginStart="5.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="30.0dip" android:layout_marginBottom="30.0dip" />
+            <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:layout_marginStart="15.0dip">
+                <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/star_search" />
+                <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" (" />
+                <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:id="@id/tvUseNum" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" / " />
+                <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:id="@id/tvVisNum" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=")" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textSize="21.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BDS   " />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/green_light" android:id="@id/tvBDS" android:background="@drawable/bg_edittext" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textSize="21.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GPS  " />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/blue_light" android:id="@id/tvGPS" android:background="@drawable/bg_edittext" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textSize="21.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GLN   " />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/red_light" android:id="@id/tvGLN" android:background="@drawable/bg_edittext" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textSize="21.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GAL  " />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/purple_200" android:id="@id/tvGAL" android:background="@drawable/bg_edittext" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textSize="21.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QZSS " />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/teal_200" android:id="@id/tvQZSS" android:background="@drawable/bg_edittext" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textSize="21.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="SBAS" />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/orange" android:id="@id/tvSBAS" android:background="@drawable/bg_edittext" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip">
+                    <TextView android:textSize="21.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IRNSS" />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/yellow" android:id="@id/tvIRNSS" android:background="@drawable/bg_edittext" android:paddingTop="6.0dip" android:paddingBottom="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" android:layout_marginStart="15.0dip" />
+                </LinearLayout>
+                <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_round_white" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@color/text_black" android:gravity="center" android:id="@id/tvDelete" android:background="@drawable/bg_ripple_round_white_theme" android:padding="12.0dip" android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="@string/delete" />
+    <View android:background="@color/line" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/text_black" android:gravity="center" android:id="@id/tvModify" android:background="@drawable/bg_ripple_round_white_theme" android:padding="12.0dip" android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="@string/modify" />
+</LinearLayout>

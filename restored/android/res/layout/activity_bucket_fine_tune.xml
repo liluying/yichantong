@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/topBar" layout="@layout/topbar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/lltProgress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginTop="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.cardview.widget.CardView android:id="@id/cvNameStep" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="15.0dip" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip">
+            <RelativeLayout android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:id="@id/tvNameDes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/please_enter_shovel_name" android:layout_above="@id/fltName" android:layout_centerHorizontal="true" />
+                <FrameLayout android:id="@id/fltName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:layout_centerInParent="true">
+                    <androidx.appcompat.widget.AppCompatEditText android:textSize="20.0dip" android:textColor="@color/text_black" android:textColorHint="@color/text_hint" android:gravity="start|center" android:id="@id/edtName" android:background="@drawable/bg_gray_light_round_bg" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/please_enter_shovel_name" android:singleLine="true" android:textDirection="locale" android:textAlignment="viewStart" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    <com.qianhe.yct.view.NightAwareImageView android:layout_gravity="end|center" android:id="@id/ivReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_reset" android:layout_marginEnd="20.0dip" />
+                </FrameLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView android:id="@id/cvCollectStep" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="15.0dip" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip">
+            <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="18.0dip" android:textColor="@color/text_black" android:gravity="start" android:id="@id/tvStepNumber" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="5.0dip" />
+                <TextView android:textSize="18.0dip" android:textColor="@color/text_black" android:id="@id/tvStepAction" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:lineSpacingExtra="5.0dip" />
+                <com.qianhe.yct.view.NightAwareImageView android:id="@id/ivStep" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="20.0dip" android:scaleType="fitCenter" android:layout_weight="1.0" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip">
+        <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvPrevious" android:background="@drawable/bg_ripple_round_black" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="@string/previous" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+        <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvNext" android:background="@drawable/sel_collect_ready_theme_bg" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="@string/next" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "0",
+    "name": "SATEL"
+  },
+  {
+    "id": "1",
+    "name": "PCC-EOT(4FSK)"
+  },
+  {
+    "id": "2",
+    "name": "PCC-EOT(GMSK)"
+  },
+  {
+    "id": "3",
+    "name": "TrimTalk 450S(T)(9600)"
+  },
+  {
+    "id": "4",
+    "name": "South 9600"
+  },
+  {
+    "id": "5",
+    "name": "TrimTalk 450S(P)(9600)"
+  },
+  {
+    "id": "6",
+    "name": "HiTarget 9600"
+  },
+  {
+    "id": "7",
+    "name": "HiTarget 19200"
+  },
+  {
+    "id": "8",
+    "name": "TrimMask II"
+  },
+  {
+    "id": "9",
+    "name": "TrimMask III (19200)"
+  },
+  {
+    "id": "10",
+    "name": "SOUTH 19200"
+  },
+  {
+    "id": "11",
+    "name": "TrimTalk1"
+  },
+  {
+    "id": "12",
+    "name": "PC5"
+  },
+  {
+    "id": "13",
+    "name": "GEOTALK"
+  },
+  {
+    "id": "14",
+    "name": "GEOMARK"
+  },
+  {
+    "id": "21",
+    "name": "SATEL-8FSK"
+  },
+  {
+    "id": "22",
+    "name": "SATEL-16FSK"
+  },
+  {
+    "id": "23",
+    "name": "SATEL-4FSK"
+  },
+  {
+    "id": "24",
+    "name": "TrimTalk 4800"
+  }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

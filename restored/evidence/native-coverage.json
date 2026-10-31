@@ -1,0 +1,60 @@
+[
+  {
+    "abi": "arm64-v8a",
+    "original_api_count": 21,
+    "recovered": [
+      "libexcavator_cali_mode_1_0",
+      "libexcavator_cali_mode_2_0",
+      "libexcavator_cali_mode_3_0",
+      "libexcavator_get_mode",
+      "libexcavator_get_tool",
+      "libexcavator_init",
+      "libexcavator_set_tool",
+      "libexcavator_tool_check",
+      "libexcavator_tool_from_binary",
+      "libexcavator_tool_from_distance",
+      "libexcavator_tool_to_binary",
+      "libexcavator_version"
+    ],
+    "forwarded": [
+      "libexcavator_adjust_hab_vertical",
+      "libexcavator_adjust_height",
+      "libexcavator_adjust_rtk",
+      "libexcavator_cali_mode_1_1",
+      "libexcavator_cali_mode_2_1",
+      "libexcavator_from_binary",
+      "libexcavator_get_height_stdev",
+      "libexcavator_get_rtk_stdev",
+      "libexcavator_to_binary"
+    ]
+  },
+  {
+    "abi": "armeabi-v7a",
+    "original_api_count": 21,
+    "recovered": [
+      "libexcavator_cali_mode_1_0",
+      "libexcavator_cali_mode_2_0",
+      "libexcavator_cali_mode_3_0",
+      "libexcavator_get_mode",
+      "libexcavator_get_tool",
+      "libexcavator_init",
+      "libexcavator_set_tool",
+      "libexcavator_tool_check",
+      "libexcavator_tool_from_binary",
+      "libexcavator_tool_from_distance",
+      "libexcavator_tool_to_binary",
+      "libexcavator_version"
+    ],
+    "forwarded": [
+      "libexcavator_adjust_hab_vertical",
+      "libexcavator_adjust_height",
+      "libexcavator_adjust_rtk",
+      "libexcavator_cali_mode_1_1",
+      "libexcavator_cali_mode_2_1",
+      "libexcavator_from_binary",
+      "libexcavator_get_height_stdev",
+      "libexcavator_get_rtk_stdev",
+      "libexcavator_to_binary"
+    ]
+  }
+]

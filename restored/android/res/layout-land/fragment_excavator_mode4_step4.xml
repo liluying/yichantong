@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_weight="1.0" android:layout_marginStart="15.0dip" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip" app:cardUseCompatPadding="false">
+            <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <pl.droidsonroids.gif.GifImageView android:id="@id/ivStep" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/icon_dx_mode4_plumb_left" android:adjustViewBounds="true" />
+                <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0dip" android:textColor="@color/sel_theme_color" android:gravity="center_vertical" android:id="@id/tvDoubt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:text="@string/actual_measurement_diagram" android:drawablePadding="6.0dip" android:layout_alignBottom="@id/ivStep" android:drawableEnd="@drawable/icon_doubt" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.core.widget.NestedScrollView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_weight="1.0" android:overScrollMode="never" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_round_white" android:paddingTop="15.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip">
+                <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/calibration_precautions" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/tvTips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/excavator_mode4_step4_tips" android:lineSpacingExtra="5.0dip" />
+                <RadioGroup android:orientation="vertical" android:id="@id/rgPlumbSide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <RadioButton android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/rbPlumbLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/excavator_mode4_plumb_left_of_d" />
+                    <RadioButton android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/rbPlumbRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/excavator_mode4_plumb_right_of_d" />
+                </RadioGroup>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit" />
+                    <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" : " />
+                    <com.qianhe.yct.view.UnitDropdownView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/unitDropdownSensor" android:layout_width="wrap_content" android:layout_height="wrap_content" app:enabled="false" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="@dimen/excavator_param_label_min_width" android:text="Dx:" android:layout_marginEnd="10.0dip" />
+                    <com.qianhe.yct.view.NumericEditText android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/edtDx" android:background="@drawable/bg_base_gray_round_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:layout_weight="1.0" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" app:supportNegative="false" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="25.0dip" android:layout_marginEnd="25.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvPrevious" android:background="@drawable/bg_ripple_round_black" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/previous" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginEnd="25.0dip" />
+        <TextView android:enabled="false" android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvContinue" android:background="@drawable/sel_enabled_theme_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/btn_complete" android:layout_weight="1.0" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,19 @@
+{
+  "passed_cases": 7535,
+  "failed_cases": 0,
+  "original": "/workspace/yichantong/restored/android/lib/arm64-v8a/libexcavator.so",
+  "method": "Original ARM64 instruction emulation vs compiled recovered C; explicit libc/libm hooks",
+  "functions": [
+    "libexcavator_init",
+    "libexcavator_get_mode",
+    "libexcavator_tool_check",
+    "libexcavator_tool_from_distance",
+    "libexcavator_get_tool",
+    "libexcavator_version",
+    "libexcavator_set_tool",
+    "libexcavator_tool_to_binary",
+    "libexcavator_tool_from_binary",
+    "libexcavator_cali_mode_1_0"
+  ],
+  "limits": "Does not validate real equipment or other native functions"
+}

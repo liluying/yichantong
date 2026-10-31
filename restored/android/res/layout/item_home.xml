@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:layout_marginStart="7.5dip" android:layout_marginEnd="7.5dip" app:cardCornerRadius="10.0dip" app:cardElevation="0.0dip" app:cardUseCompatPadding="false"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/lltItemContent" android:background="@drawable/bg_ripple_white" android:paddingTop="5.0dip" android:paddingBottom="10.0dip" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/ivIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@null" />
+        <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:maxLines="2" android:layout_marginStart="3.0dip" android:layout_marginEnd="3.0dip" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

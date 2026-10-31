@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/topBar" layout="@layout/titlebar" />
+        <TextView android:id="@id/tvAdmin" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_marginStart="100.0dip" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@id/tabLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/topBar" app:tabIndicatorAnimationMode="linear" app:tabIndicatorColor="@color/theme" app:tabIndicatorFullWidth="false" app:tabSelectedTextAppearance="@style/MyTabSelectedTextAppearance" app:tabTextAppearance="@style/MyTabTextAppearance" />
+    <androidx.viewpager2.widget.ViewPager2 android:id="@id/viewPager2" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never" />
+</LinearLayout>

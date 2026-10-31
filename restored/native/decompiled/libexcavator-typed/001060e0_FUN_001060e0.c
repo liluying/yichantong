@@ -1,0 +1,16 @@
+/* Artifact: libexcavator.so | Address: 001060e0 | Ghidra static pseudocode; types require review. */
+
+/* WARNING: This is an inlined function */
+
+void FUN_001060e0(undefined8 param_1,undefined8 param_2,undefined8 param_3)
+
+{
+  long unaff_x19;
+  
+  *(undefined8 *)(unaff_x19 + 8) = param_1;
+  *(undefined8 *)(unaff_x19 + 0x10) = param_2;
+  *(undefined8 *)(unaff_x19 + 0x18) = param_3;
+  FUN_00101778();
+  return;
+}
+

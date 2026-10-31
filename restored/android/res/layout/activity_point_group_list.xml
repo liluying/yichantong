@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <include android:id="@id/topBar" layout="@layout/titlebar" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="end|bottom" android:orientation="horizontal" android:id="@id/lltAll" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="16.0dip">
+            <TextView android:textSize="18.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_all" android:layout_marginEnd="5.0dip" />
+            <ImageView android:id="@id/ivAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_single_btn" />
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rcvPointGroupList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/lltEmpty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="40.0dip" android:layout_marginEnd="40.0dip">
+            <ImageView android:id="@id/ivEmpty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_pointlib_new" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/text_gray" android:gravity="center" android:id="@id/tvEmptyDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:lineSpacingExtra="5.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+    <com.qianhe.yct.view.PointBottomView android:id="@id/bottomBtn" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

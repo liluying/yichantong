@@ -1,0 +1,74 @@
+[
+  {
+    "code": "",
+    "name": "自动"
+  },
+  {
+    "code": "ar",
+    "name": "عربي"
+  },
+  {
+    "code": "de",
+    "name": "Deutsch"
+  },
+  {
+    "code": "en",
+    "name": "English"
+  },
+  {
+    "code": "es",
+    "name": "Español"
+  },
+  {
+    "code": "fa",
+    "name": "فارسی"
+  },
+  {
+    "code": "fr",
+    "name": "Français"
+  },
+  {
+    "code": "hi",
+    "name": "हिंदी"
+  },
+  {
+    "code": "it",
+    "name": "Italiano"
+  },
+  {
+    "code": "ja",
+    "name": "にほんご"
+  },
+  {
+    "code": "ko",
+    "name": "한국인"
+  },
+  {
+    "code": "nl",
+    "name": "Nederlands"
+  },
+  {
+    "code": "pt",
+    "name": "Português"
+  },
+  {
+    "code": "tr",
+    "name": "Türkçe"
+  },
+  {
+    "code": "ru",
+    "name": "Русский"
+  },
+  {
+    "code": "vi",
+    "name": "Tiếng Việt"
+  },
+  {
+    "code": "zh",
+    "name": "中文（简体）"
+  },
+  {
+    "code": "zh-TW",
+    "name": "中文（繁體）"
+  }
+]

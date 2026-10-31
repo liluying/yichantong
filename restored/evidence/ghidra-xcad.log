@@ -1,0 +1,361 @@
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Temurin-21.0.8+9 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.8+9 (build 21.0.8+9-LTS, mixed mode)
+INFO  Using log config file: jar:file:/workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1549 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (3120 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Jython/ghidra_scripts
+    /workspace/yct-restored/scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/apk-analysis/tools/ghidra-projects/xcad (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/apk-analysis/tools/ghidra-projects/xcad (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /workspace/apk-analysis/tools/ghidra-projects/xcad (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libxcadforjava.so (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: AARCH64:LE:64:v8A:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (AutoImporter)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7bc08 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7bce0 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7be50 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7068 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7078 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8ac0 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8d70 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8ff0 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca92d8 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9350 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca96d0 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9ba0 (External Location = _ZTVN10__cxxabiv117__class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7bc18 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7bc68 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7bcf0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7bd08 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7bdb8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7be08 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7be60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00c7be78 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca6fe8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7088 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca70d8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7130 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7170 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca71b0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca71f0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7230 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7270 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca72b0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca72f0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7368 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca73e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7480 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7520 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7560 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca75a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca75e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7620 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7660 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca76a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca76e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7720 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7760 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca77a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca77e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7820 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7860 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca78a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca78e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7920 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7960 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca79a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca79e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7a20 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7a60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7aa0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7ae0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7b20 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7b60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7ba0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7be0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7c20 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7c60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7ca0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7ce0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7d20 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7d60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7da0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7de0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7e20 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7e60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7ea0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7ee0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7f20 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7f60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7fa0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca7fe0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8020 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8060 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca80a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca80e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8120 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8160 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca81a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca81e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8220 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8260 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca82a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca82e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8320 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8360 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca83a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca83e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8420 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8460 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca84a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca84e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8520 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8560 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca85a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca85e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8620 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8660 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca86a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca86e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8778 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8790 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8808 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8998 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca89f0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8a40 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8db0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8df8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8e40 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca8e58 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9000 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9338 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca94e8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9568 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9710 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9758 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca97a0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca97e8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9830 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9878 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca98c0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9908 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9bf0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9c48 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9ca0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9cf8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9d50 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9da8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9e00 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9e58 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9eb0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9f08 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9f60 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00ca9fb8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa010 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa068 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa0c0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa118 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa170 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa1c8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa220 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa278 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa2d0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa328 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa380 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa3d8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa430 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa488 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa4e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa538 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa588 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa5d8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa628 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa678 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa6c8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa718 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa768 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa7b8 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00caa808 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00d111e0 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+WARN  EXTERNAL Data ELF Relocation with offset: at 00d11228 (External Location = _ZTVN10__cxxabiv120__si_class_type_infoE+0x10) (ElfRelocationHandler)  
+INFO  Additional info:
+Loading file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libxcadforjava.so?MD5=d49ce59f5d84b02570fd95b2c410657a...
+Setting block .data.rel.ro to read-only
+Setting block .fini_array to read-only
+Setting block .init_array to read-only
+Setting block .dynamic to read-only
+------------------------------------------------
+
+Linking the External Programs of 'libxcadforjava.so' to imported libraries...
+  [libandroid.so] -> not found in project
+  [liblog.so] -> not found in project
+  [libdl.so] -> not found in project
+  [libm.so] -> not found in project
+  [libc++_shared.so] -> not found in project
+  [libc.so] -> not found in project
+------------------------------------------------
+
+Resolving External Symbols of [/libxcadforjava.so] - 242 unresolved symbols, no external libraries configured - skipping
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libxcadforjava.so (HeadlessAnalyzer)  
+INFO  DWARF external debug information found: ExternalDebugInfo [filename=null, crc=0, hash=a69fd4db9fd2c6ee73ce48e3008f150a976df91a] (ExternalDebugFileSectionProvider)  
+INFO  Unable to find DWARF information, skipping DWARF analysis (DWARFAnalyzer)  
+ERROR VarnodeContext: out of address spaces at @008098a8 for: d28-008098a8 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @006f8920 for: d24-006f8920 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0083b180 for: d30-0083b180 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008a45ec for: x16-008a45ec (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00828d98 for: x1-00828d98 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00825e14 for: x11-00825e14 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008145e0 for: d17-008145e0 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00740a48 for: d25-00740a48 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @006a7e88 for: x9-006a7e88 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008cf240 for: x8-008cf240 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008cf234 for: x1-008cf234 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00a182b0 for: d18-00a182b0 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008cf26c for: d29-008cf26c (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008f2448 for: d23-008f2448 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @006c2430 for: d21-006c2430 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @007015fc for: d18-007015fc (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008d03e0 for: d26-008d03e0 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0070d18c for: x17-0070d18c (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008cc9cc for: d23-008cc9cc (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @007273ec for: x5-007273ec (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008cf2a0 for: x10-008cf2a0 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008cf2a0 for: x10-008cf2a0 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0084ff8c for: x9-0084ff8c (VarnodeContext)  
+INFO  Packed database cache: /tmp/agent-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib_64 (ApplyDataArchiveAnalyzer)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d070: std::length_error::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d098: std::length_error::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d110: std::bad_alloc::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d120: std::exception::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d160: std::bad_array_new_length::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d1b0: __cxxabiv1::__class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d1b8: __cxxabiv1::__si_class_type_info::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d1e8: std::__ndk1::__shared_weak_count::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d438: std::out_of_range::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d448: std::out_of_range::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d4a8: std::__ndk1::basic_ifstream<char,std::__ndk1::char_traits<char>>::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d4b0: std::__ndk1::basic_ifstream<char,std::__ndk1::char_traits<char>>::VTT (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d510: std::__ndk1::basic_ostringstream<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d518: std::__ndk1::basic_ostringstream<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::VTT (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d528: std::__ndk1::basic_stringbuf<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d598: std::__ndk1::basic_istringstream<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::VTT (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d5a0: std::__ndk1::basic_stringstream<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::VTT (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d5b0: std::__ndk1::basic_istringstream<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d5b8: std::__ndk1::basic_stringstream<char,std::__ndk1::char_traits<char>,std::__ndk1::allocator<char>>::vtable (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d820: std::runtime_error::typeinfo (DemangledAddressTable)  
+WARN  Unable to fully apply external demangled Address Table at 00d1d838: std::__ndk1::locale::facet::typeinfo (DemangledAddressTable)  
+ERROR VarnodeContext: out of address spaces at @008098a8 for: d28-008098a8 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @006f8920 for: d24-006f8920 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0083b180 for: d30-0083b180 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008a45ec for: x16-008a45ec (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00828d98 for: x1-00828d98 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00825e14 for: x11-00825e14 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008145e0 for: d17-008145e0 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00740a48 for: d25-00740a48 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @006a7e88 for: x9-006a7e88 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @00a182b0 for: d18-00a182b0 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008f2448 for: d23-008f2448 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @006c2430 for: d21-006c2430 (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @007015fc for: d18-007015fc (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0070d18c for: x17-0070d18c (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @008cc9cc for: d23-008cc9cc (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @007273ec for: x5-007273ec (VarnodeContext)  
+ERROR VarnodeContext: out of address spaces at @0084ff8c for: x9-0084ff8c (VarnodeContext)  
+INFO  -----------------------------------------------------
+    AARCH64 ELF PLT Thunks                     0.211 secs
+    ASCII Strings                              1.222 secs
+    Apply Data Archives                        0.724 secs
+    Basic Constant Reference Analyzer         55.477 secs
+    Call Convention ID                         0.111 secs
+    Call-Fixup Installer                       0.253 secs
+    Create Address Tables                      1.504 secs
+    Create Address Tables - One Time           1.406 secs
+    Create Function                            0.279 secs
+    DWARF                                      0.013 secs
+    Data Reference                             2.464 secs
+    Decompiler Switch Analysis                 6.454 secs
+    Demangler GNU                              0.481 secs
+    Disassemble                                0.145 secs
+    Disassemble Entry Points                  15.772 secs
+    Embedded Media                             0.157 secs
+    External Entry References                  0.003 secs
+    Function Start Search                      0.380 secs
+    Function Start Search After Code           0.455 secs
+    Function Start Search After Data           0.488 secs
+    Function Start Search delayed - One Time   0.013 secs
+    GCC Exception Handlers                    21.374 secs
+    Non-Returning Functions - Discovered       4.710 secs
+    Non-Returning Functions - Known            0.006 secs
+    Reference                                  3.379 secs
+    Shared Return Calls                        2.331 secs
+    Stack                                     41.359 secs
+    Subroutine References                      1.865 secs
+    Subroutine References - One Time           0.000 secs
+-----------------------------------------------------
+     Total Time   163 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libxcadforjava.so (HeadlessAnalyzer)  
+SignApk.java:1: error: package com.android.apksig does not exist
+import com.android.apksig.*;
+^
+SignApk.java:9: error: package ApkVerifier does not exist
+   ApkVerifier.Result r=new ApkVerifier.Builder(new File(args[1])).build().verify();
+              ^
+SignApk.java:9: error: package ApkVerifier does not exist
+   ApkVerifier.Result r=new ApkVerifier.Builder(new File(args[1])).build().verify();
+                                       ^
+SignApk.java:18: error: package ApkSigner does not exist
+  ApkSigner.SignerConfig c=new ApkSigner.SignerConfig.Builder("local-debug",key,certs).build();
+           ^
+SignApk.java:18: error: package ApkSigner.SignerConfig does not exist
+  ApkSigner.SignerConfig c=new ApkSigner.SignerConfig.Builder("local-debug",key,certs).build();
+                                                     ^
+SignApk.java:19: error: package ApkSigner does not exist
+  new ApkSigner.Builder(List.of(c)).setInputApk(new File(args[1])).setOutputApk(new File(args[2])).setMinSdkVersion(21).setV1SigningEnabled(true).setV2SigningEnabled(true).setV3SigningEnabled(true).build().sign();
+               ^
+skipping /workspace/yct-restored/scripts/SignApk.java
+INFO  SCRIPT: /workspace/yct-restored/scripts/ExportAlgorithms.java (HeadlessAnalyzer)  
+INFO  ExportAlgorithms.java> EXPORT_RESULT ok=6 failed=0 skipped=11178 (GhidraScript)  
+INFO  ANALYZING changes made by post scripts: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libxcadforjava.so (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libxcadforjava.so (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /libxcadforjava.so (xcad:/libxcadforjava.so) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

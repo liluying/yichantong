@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip" app:cardUseCompatPadding="false">
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.qianhe.yct.view.NightAwareImageView android:id="@id/ivStep" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0dip" android:textColor="@color/sel_theme_color" android:gravity="center_vertical" android:id="@id/tvDoubt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:text="@string/actual_measurement_diagram" android:drawablePadding="6.0dip" android:layout_alignBottom="@id/ivStep" android:drawableEnd="@drawable/icon_doubt" android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_margin="15.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_round_white" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@id/layoutMeasureType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bucket_measure_type" />
+                <RadioGroup android:orientation="horizontal" android:id="@id/rgMeasureType" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <RadioButton android:textSize="16.0dip" android:textColor="@color/text_black" android:id="@id/rbTriangleMeasure" android:layout_width="0.0dip" android:layout_height="fill_parent" android:checked="true" android:text="@string/bucket_measure_type_triangle" android:layout_weight="1.0" />
+                    <RadioButton android:textSize="16.0dip" android:textColor="@color/text_black" android:id="@id/rbReadingMeasure" android:layout_width="0.0dip" android:layout_height="fill_parent" android:checked="false" android:text="@string/bucket_measure_type_reading" android:layout_weight="1.0" />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" : " />
+                <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <androidx.appcompat.widget.AppCompatEditText android:textSize="20.0dip" android:textColor="@color/text_black" android:textColorHint="@color/text_hint" android:gravity="start|center" android:id="@id/edtName" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/please_enter_shovel_name" android:singleLine="true" android:textDirection="locale" android:textAlignment="viewStart" android:paddingStart="15.0dip" android:paddingEnd="45.0dip" />
+                    <ImageView android:layout_gravity="end|center" android:id="@id/ivReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_reset" android:layout_marginEnd="12.0dip" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" : " />
+                <com.qianhe.yct.view.UnitDropdownView android:gravity="center" android:id="@id/unitDropdown" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" app:enabled="false" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layoutManualParams" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include android:id="@id/layoutG1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                    <include android:id="@id/layoutG2" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" layout="@layout/view_custom_edit_item" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <include android:id="@id/layoutG3" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                    <include android:id="@id/layoutLR" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" layout="@layout/view_custom_edit_item" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <include android:id="@id/layoutAB" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/layoutAutoGenerateParams" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include android:id="@id/layoutAutoAB" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                    <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/layoutAutoT0Module" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/layoutAutoT0x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <include android:id="@id/layoutAutoT0y" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" layout="@layout/view_custom_edit_item" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <include android:id="@id/layoutAutoT0z" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/layoutAutoT1Module" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/layoutAutoT1x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <include android:id="@id/layoutAutoT1y" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" layout="@layout/view_custom_edit_item" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <include android:id="@id/layoutAutoT1z" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/layoutAutoT2Module" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/layoutAutoT2x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <include android:id="@id/layoutAutoT2y" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" layout="@layout/view_custom_edit_item" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <include android:id="@id/layoutAutoT2z" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/layoutAutoT3Module" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <include android:id="@id/layoutAutoT3x" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <include android:id="@id/layoutAutoT3y" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip" layout="@layout/view_custom_edit_item" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <include android:id="@id/layoutAutoT3z" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" layout="@layout/view_custom_edit_item" />
+                        <View android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" android:layout_marginStart="8.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:layout_marginStart="25.0dip" android:layout_marginEnd="25.0dip">
+        <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvPrevious" android:background="@drawable/bg_ripple_round_black" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/previous" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginEnd="15.0dip" />
+        <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvFineTune" android:background="@drawable/bg_ripple_round_theme" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/bucket_fine_tune" android:layout_weight="1.0" android:textAllCaps="false" />
+        <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvApply" android:background="@drawable/bg_ripple_round_theme" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/save_and_apply" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginStart="15.0dip" />
+    </LinearLayout>
+</LinearLayout>

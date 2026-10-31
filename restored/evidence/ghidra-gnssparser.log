@@ -1,0 +1,110 @@
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Temurin-21.0.8+9 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.8+9 (build 21.0.8+9-LTS, mixed mode)
+INFO  Using log config file: jar:file:/workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1125 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (2223 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Jython/ghidra_scripts
+    /workspace/yct-restored/scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/apk-analysis/tools/ghidra-projects/gnssparser (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/apk-analysis/tools/ghidra-projects/gnssparser (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /workspace/apk-analysis/tools/ghidra-projects/gnssparser (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libgnssparser.so (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: AARCH64:LE:64:v8A:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (AutoImporter)  
+INFO  Additional info:
+Loading file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libgnssparser.so?MD5=6e08d065470b2a56cc6b2ca2286f55c7...
+Setting block .fini_array to read-only
+Setting block .data.rel.ro to read-only
+Setting block .dynamic to read-only
+------------------------------------------------
+
+Linking the External Programs of 'libgnssparser.so' to imported libraries...
+  [liblog.so] -> not found in project
+  [libz.so] -> not found in project
+  [libm.so] -> not found in project
+  [libdl.so] -> not found in project
+  [libc.so] -> not found in project
+------------------------------------------------
+
+Resolving External Symbols of [/libgnssparser.so] - 5 unresolved symbols, no external libraries configured - skipping
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libgnssparser.so (HeadlessAnalyzer)  
+INFO  DWARF external debug information found: ExternalDebugInfo [filename=null, crc=0, hash=45b0544b51250b53a2e3312a527af384951dea5d] (ExternalDebugFileSectionProvider)  
+INFO  Unable to find DWARF information, skipping DWARF analysis (DWARFAnalyzer)  
+INFO  Packed database cache: /tmp/agent-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib_64 (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    AARCH64 ELF PLT Thunks                     0.050 secs
+    ASCII Strings                              0.576 secs
+    Apply Data Archives                        1.210 secs
+    Basic Constant Reference Analyzer          0.342 secs
+    Call Convention ID                         0.004 secs
+    Call-Fixup Installer                       0.004 secs
+    Create Address Tables                      0.017 secs
+    Create Address Tables - One Time           0.001 secs
+    Create Function                            0.106 secs
+    DWARF                                      0.008 secs
+    Data Reference                             0.030 secs
+    Decompiler Switch Analysis                 1.078 secs
+    Demangler GNU                              0.038 secs
+    Disassemble                                0.028 secs
+    Disassemble Entry Points                   0.284 secs
+    Embedded Media                             0.018 secs
+    External Entry References                  0.001 secs
+    Function Start Search                      0.059 secs
+    Function Start Search After Code           0.008 secs
+    Function Start Search After Data           0.009 secs
+    Function Start Search delayed - One Time   0.007 secs
+    Non-Returning Functions - Discovered       0.007 secs
+    Non-Returning Functions - Known            0.003 secs
+    Reference                                  0.042 secs
+    Shared Return Calls                        0.031 secs
+    Stack                                      0.207 secs
+    Subroutine References                      0.100 secs
+-----------------------------------------------------
+     Total Time   4 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libgnssparser.so (HeadlessAnalyzer)  
+INFO  SCRIPT: /workspace/yct-restored/scripts/ExportAlgorithms.java (HeadlessAnalyzer)  
+INFO  ExportAlgorithms.java> EXPORT_RESULT ok=75 failed=0 skipped=11 (GhidraScript)  
+INFO  ANALYZING changes made by post scripts: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libgnssparser.so (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libgnssparser.so (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /libgnssparser.so (gnssparser:/libgnssparser.so) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

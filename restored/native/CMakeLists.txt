@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.22)
+project(yct_recovered_algorithms C)
+set(CMAKE_C_STANDARD 11)
+add_library(excavator_recovered SHARED recovered/excavator_recovered.c recovered/excavator_geometry.c)
+add_library(gnss_transform_recovered SHARED recovered/gnss_transform.c)
+target_link_libraries(excavator_recovered PRIVATE m)
+target_link_libraries(gnss_transform_recovered PRIVATE m)
+target_compile_options(excavator_recovered PRIVATE -ffp-contract=off -Wall -Wextra)
+target_compile_options(gnss_transform_recovered PRIVATE -ffp-contract=off -Wall -Wextra)
+
+# Explicit mixed implementation: 12 recovered entry points, 9 original forwards.
+add_library(excavator_hybrid SHARED recovered/excavator_recovered.c recovered/excavator_geometry.c recovered/excavator_fallback.c)
+set_target_properties(excavator_hybrid PROPERTIES OUTPUT_NAME excavator)
+target_link_libraries(excavator_hybrid PRIVATE m dl)
+target_compile_options(excavator_hybrid PRIVATE -ffp-contract=off -Wall -Wextra)

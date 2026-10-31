@@ -1,1 +1,7 @@
 *.apk filter=lfs diff=lfs merge=lfs -text
+
+# Reconstructed project binary dependencies
+restored/**/*.so filter=lfs diff=lfs merge=lfs -text
+restored/tools/*.jar filter=lfs diff=lfs merge=lfs -text
+restored/**/*.ttf filter=lfs diff=lfs merge=lfs -text
+restored/**/*.dat filter=lfs diff=lfs merge=lfs -text

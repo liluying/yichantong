@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:orientation="vertical" android:id="@id/main" android:padding="15.0dip" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.qianhe.yct.view.CustomBarChart android:id="@id/chartBDS" android:layout_width="fill_parent" android:layout_height="200.0dip" />
+        <com.qianhe.yct.view.CustomBarChart android:id="@id/chartGPS" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="15.0dip" />
+        <com.qianhe.yct.view.CustomBarChart android:id="@id/chartGLN" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="15.0dip" />
+        <com.qianhe.yct.view.CustomBarChart android:id="@id/chartGAL" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="15.0dip" />
+        <com.qianhe.yct.view.CustomBarChart android:id="@id/chartQZSS" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="15.0dip" />
+        <com.qianhe.yct.view.CustomBarChart android:id="@id/chartSBAS" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="15.0dip" />
+        <com.qianhe.yct.view.CustomBarChart android:id="@id/chartIRNSS" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="15.0dip" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

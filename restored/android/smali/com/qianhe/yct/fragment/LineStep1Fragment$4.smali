@@ -1,0 +1,116 @@
+.class Lcom/qianhe/yct/fragment/LineStep1Fragment$4;
+.super Ljava/lang/Object;
+.source "LineStep1Fragment.java"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/qianhe/yct/fragment/LineStep1Fragment;->initView()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/qianhe/yct/fragment/LineStep1Fragment;
+
+
+# direct methods
+.method constructor <init>(Lcom/qianhe/yct/fragment/LineStep1Fragment;)V
+    .locals 0
+
+    .line 137
+    iput-object p1, p0, Lcom/qianhe/yct/fragment/LineStep1Fragment$4;->this$0:Lcom/qianhe/yct/fragment/LineStep1Fragment;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public afterTextChanged(Landroid/text/Editable;)V
+    .locals 6
+
+    .line 150
+    iget-object p1, p0, Lcom/qianhe/yct/fragment/LineStep1Fragment$4;->this$0:Lcom/qianhe/yct/fragment/LineStep1Fragment;
+
+    invoke-static {p1}, Lcom/qianhe/yct/fragment/LineStep1Fragment;->-$$Nest$fgetlineEntity(Lcom/qianhe/yct/fragment/LineStep1Fragment;)Lcom/qianhe/baselib/bean/LineEntity;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lcom/qianhe/yct/fragment/LineStep1Fragment$4;->this$0:Lcom/qianhe/yct/fragment/LineStep1Fragment;
+
+    invoke-static {v0}, Lcom/qianhe/yct/fragment/LineStep1Fragment;->-$$Nest$fgetbinding(Lcom/qianhe/yct/fragment/LineStep1Fragment;)Lcom/qianhe/yct/databinding/FragmentLineStep1Binding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/qianhe/yct/databinding/FragmentLineStep1Binding;->edtElev:Lcom/qianhe/yct/view/NumericEditText;
+
+    invoke-virtual {v0}, Lcom/qianhe/yct/view/NumericEditText;->getNumericValue()D
+
+    move-result-wide v0
+
+    iput-wide v0, p1, Lcom/qianhe/baselib/bean/LineEntity;->targetElevation1:D
+
+    .line 151
+    iget-object p1, p0, Lcom/qianhe/yct/fragment/LineStep1Fragment$4;->this$0:Lcom/qianhe/yct/fragment/LineStep1Fragment;
+
+    invoke-static {p1}, Lcom/qianhe/yct/fragment/LineStep1Fragment;->-$$Nest$fgetbinding(Lcom/qianhe/yct/fragment/LineStep1Fragment;)Lcom/qianhe/yct/databinding/FragmentLineStep1Binding;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lcom/qianhe/yct/databinding/FragmentLineStep1Binding;->linePreView:Lcom/qianhe/yct/view/LinePreView;
+
+    iget-object v0, p0, Lcom/qianhe/yct/fragment/LineStep1Fragment$4;->this$0:Lcom/qianhe/yct/fragment/LineStep1Fragment;
+
+    invoke-static {v0}, Lcom/qianhe/yct/fragment/LineStep1Fragment;->-$$Nest$fgetlineEntity(Lcom/qianhe/yct/fragment/LineStep1Fragment;)Lcom/qianhe/baselib/bean/LineEntity;
+
+    move-result-object v0
+
+    iget-wide v0, v0, Lcom/qianhe/baselib/bean/LineEntity;->east1:D
+
+    iget-object v2, p0, Lcom/qianhe/yct/fragment/LineStep1Fragment$4;->this$0:Lcom/qianhe/yct/fragment/LineStep1Fragment;
+
+    invoke-static {v2}, Lcom/qianhe/yct/fragment/LineStep1Fragment;->-$$Nest$fgetlineEntity(Lcom/qianhe/yct/fragment/LineStep1Fragment;)Lcom/qianhe/baselib/bean/LineEntity;
+
+    move-result-object v2
+
+    iget-wide v2, v2, Lcom/qianhe/baselib/bean/LineEntity;->targetElevation1:D
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [D
+
+    const/4 v5, 0x0
+
+    aput-wide v0, v4, v5
+
+    const/4 v0, 0x1
+
+    aput-wide v2, v4, v0
+
+    invoke-virtual {p1, v4}, Lcom/qianhe/yct/view/LinePreView;->setPointA([D)V
+
+    return-void
+.end method
+
+.method public beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .line 0
+    return-void
+.end method
+
+.method public onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .line 0
+    return-void
+.end method

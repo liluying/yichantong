@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/topBar" layout="@layout/topbar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/lltProgress" android:layout_width="fill_parent" android:layout_height="4.0dip" android:layout_marginTop="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <androidx.cardview.widget.CardView android:id="@id/cvStep" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="15.0dip" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip">
+            <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <androidx.core.widget.NestedScrollView android:scrollbarAlwaysDrawVerticalTrack="true" android:id="@id/nsvStepText" android:scrollbars="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:fillViewport="false" android:layout_weight="1.0" android:fadeScrollbars="false" android:overScrollMode="never">
+                        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="16.0dip" android:textColor="@color/text_black" android:id="@id/tvCommonTips" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/verfify_accuracy_tips" android:lineSpacingExtra="5.0dip" />
+                            <TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:id="@id/tvStepAction" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lineSpacingExtra="5.0dip" />
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="12.0dip">
+                        <com.qianhe.yct.view.NightAwareImageView android:id="@id/ivStep" android:layout_width="fill_parent" android:layout_height="0.0dip" android:scaleType="fitCenter" android:minHeight="@dimen/verify_step_image_min_height" android:layout_weight="1.0" />
+                        <com.qianhe.yct.view.ArmAngleScaleBarView android:id="@id/armAngleScaleBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                        <TextView android:textSize="14.0dip" android:textColor="@color/orange" android:gravity="center" android:id="@id/tvArmAngleBestTip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/arm_angle_best_collect_tip" />
+                        <TextView android:textSize="18.0dip" android:textColor="@color/text_black" android:gravity="center" android:id="@id/tvHeadingError" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <androidx.appcompat.widget.AppCompatTextView android:textSize="18.0dip" android:textColor="@color/sel_black_and_while_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvCalibrationPointInput" android:background="@drawable/pressed_theme_and_gray" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="@string/fine_tune_calibration_point_input" android:drawableStart="@drawable/icon_instrument_collect" android:paddingStart="12.0dip" android:paddingEnd="12.0dip" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.core.widget.NestedScrollView android:id="@id/nsvResult" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="never">
+            <LinearLayout android:orientation="vertical" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip">
+                        <LinearLayout android:orientation="vertical" android:id="@id/lltElevations" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="15.0dip" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip">
+                        <LinearLayout android:orientation="vertical" android:id="@id/lltErrors" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+                <TextView android:textSize="16.0dip" android:textColor="@color/text_black" android:id="@id/tvResultHint" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/verify_accuracy_result_hint" android:lineSpacingExtra="5.0dip" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvPrevious" android:background="@drawable/bg_ripple_round_black" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="@string/previous" android:layout_weight="1.0" android:layout_marginEnd="10.0dip" />
+            <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvNext" android:background="@drawable/sel_collect_ready_theme_bg" android:layout_width="0.0dip" android:layout_height="50.0dip" android:text="@string/next" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

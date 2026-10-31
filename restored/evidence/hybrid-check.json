@@ -1,0 +1,8 @@
+{
+  "apk": "build/yct-restored-hybrid-debug.apk",
+  "sha256": "0520fa064bd5d8bb4450b0dc199cc1fb79ab41078007da43d2c0f447343cf233",
+  "zip_crc": "passed",
+  "original_library_forwarding": "two original libraries retained byte-for-byte",
+  "wrapper": "ARM64 and ARMv7 wrapper matches compiled output",
+  "runtime": "not tested on Android hardware"
+}

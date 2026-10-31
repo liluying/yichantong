@@ -1,0 +1,7 @@
+{
+  "passed_cases": 500,
+  "failed_cases": 0,
+  "successful_calibrations": 113,
+  "function": "libexcavator_cali_mode_2_0",
+  "method": "Full 312-byte native state compared against original ARM64, using numeric tolerance"
+}

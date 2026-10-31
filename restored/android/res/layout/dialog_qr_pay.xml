@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:background="@drawable/bg_transparent_round_bg" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:background="@drawable/bg_round_white" android:padding="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:id="@id/ivQR" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/bg_sp_down_work" android:layout_weight="1.0" />
+                <androidx.appcompat.widget.AppCompatTextView android:textSize="18.0dip" android:textColor="@color/text_gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="请使用微信扫码支付" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+    <ImageView android:layout_gravity="end" android:id="@id/ivClose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_close_round" />
+</FrameLayout>

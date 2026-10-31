@@ -1,0 +1,83 @@
+.class Lcom/qianhe/yct/activity/DiffDataConfigActivity$15;
+.super Ljava/lang/Object;
+.source "DiffDataConfigActivity.java"
+
+# interfaces
+.implements Landroidx/fragment/app/FragmentResultListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/qianhe/yct/activity/DiffDataConfigActivity;->initView()V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/qianhe/yct/activity/DiffDataConfigActivity;
+
+
+# direct methods
+.method constructor <init>(Lcom/qianhe/yct/activity/DiffDataConfigActivity;)V
+    .locals 0
+
+    .line 481
+    iput-object p1, p0, Lcom/qianhe/yct/activity/DiffDataConfigActivity$15;->this$0:Lcom/qianhe/yct/activity/DiffDataConfigActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onFragmentResult(Ljava/lang/String;Landroid/os/Bundle;)V
+    .locals 1
+
+    .line 484
+    const-string p1, "list"
+
+    invoke-virtual {p2, p1}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 485
+    invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 486
+    const-string v0, "index"
+
+    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;)I
+
+    move-result p2
+
+    .line 487
+    iget-object v0, p0, Lcom/qianhe/yct/activity/DiffDataConfigActivity$15;->this$0:Lcom/qianhe/yct/activity/DiffDataConfigActivity;
+
+    invoke-static {v0}, Lcom/qianhe/yct/activity/DiffDataConfigActivity;->-$$Nest$fgetbinding(Lcom/qianhe/yct/activity/DiffDataConfigActivity;)Lcom/qianhe/yct/databinding/ActivityDiffDataConfigBinding;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/qianhe/yct/databinding/ActivityDiffDataConfigBinding;->tvChannel:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {p1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    :cond_0
+    return-void
+.end method

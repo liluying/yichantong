@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="15.0dip" android:layout_weight="1.0" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_round_white" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="15.0dip">
+                <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/please_set_parameters_for_dike" />
+                <ImageView android:id="@id/ivStep1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:src="@drawable/icon_dike_step3" />
+                <TextView android:textSize="24.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_gravity="center_horizontal" android:id="@id/tvDitchType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/dike" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_round_white" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="15.0dip">
+                <LinearLayout android:orientation="vertical" android:id="@id/lltCollect" android:background="@drawable/bg_round_white" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="15.0dip" android:paddingEnd="15.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/lltRatio" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/please_enter_slope_ratio_of_ditch" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <com.qianhe.yct.view.NumericEditText android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/edtRatio" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                            <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" android:layout_marginEnd="15.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit" />
+                            <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" : " />
+                            <com.qianhe.yct.view.UnitDropdownView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/lengthDropdown" android:layout_width="wrap_content" android:layout_height="wrap_content" app:enabled="false" />
+                        </LinearLayout>
+                        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/please_enter_length_of_dike" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                            <com.qianhe.yct.view.NumericEditText android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/edtLength" android:background="@drawable/bg_base_gray_round_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" app:supportNegative="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                        <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="22.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15.0dip" android:text="@string/please_enter_width_of_dike" android:layout_centerVertical="true" />
+                        </RelativeLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                            <com.qianhe.yct.view.NumericEditText android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/edtWidth" android:background="@drawable/bg_base_gray_round_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:layout_weight="1.0" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" app:supportNegative="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvPrevious" android:background="@drawable/bg_ripple_round_black" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/previous" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginEnd="15.0dip" />
+        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvContinue" android:background="@drawable/bg_ripple_round_theme" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/next" android:layout_weight="1.0" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+[
+  {
+    "corsName": "XFIX",
+    "host": "base-hk.xfix-gnss.com",
+    "port": 6060,
+    "cgcs2000_port": 0,
+    "wgs84_port": 0,
+    "itrf2008_port": 0
+  }
+]
+

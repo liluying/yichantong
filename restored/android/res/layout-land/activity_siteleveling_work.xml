@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/topBar" layout="@layout/topbar" />
+    <TextView android:textSize="10.0dip" android:textColor="@color/text_black" android:ellipsize="start" android:gravity="start" android:id="@id/tvMachineNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:layout_marginStart="15.0dip" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lltH5" android:background="@drawable/bg_gray_light_round_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="30.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:ellipsize="end" android:id="@id/edtName" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/angle" android:singleLine="true" android:maxLength="12" android:layout_weight="1.0" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+            <TextView android:textSize="30.0dip" android:textStyle="bold" android:textColor="@color/sel_text_green_and_red" android:ellipsize="end" android:id="@id/tvArmAngle" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lltH5Pro" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.qianhe.yct.view.ToothTipDropdownView android:id="@id/toothTipView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <com.qianhe.yct.view.RollAngleView android:id="@id/rollAngleView" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="15.0dip" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:layout_weight="1.0" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginEnd="15.0dip">
+                <FrameLayout android:background="@drawable/bg_round_white" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.2">
+                    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0dip" android:textColor="@color/text_black" android:id="@id/tvDistanceDes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:text="@string/vertical_distance_to_target" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="15.0dip">
+                            <ImageView android:layout_gravity="center" android:id="@id/ivStatus" android:layout_width="wrap_content" android:layout_height="60.0dip" android:src="@drawable/icon_status_v" />
+                            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.5">
+                                <TextView android:textSize="80.0dip" android:textStyle="bold" android:textColor="@color/sel_text_green_and_red" android:gravity="center" android:id="@id/tvDiff" android:layout_width="wrap_content" android:layout_height="90.0dip" android:maxLines="2" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" />
+                                <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/sel_text_green_and_red" android:gravity="center" android:id="@id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:textSize="12.0dip" android:textColor="@color/text_black" android:layout_gravity="end|bottom" android:id="@id/tvUnitV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit_cm" android:layout_marginEnd="15.0dip" />
+                </FrameLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                    <View android:id="@id/lineTop2" android:layout_width="wrap_content" android:layout_height="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHeight_percent="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView android:background="@drawable/bg_zp_4" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                    <com.qianhe.yct.view.ArmView android:id="@id/ivArm2" android:layout_width="wrap_content" android:layout_height="wrap_content" app:imageResId="@drawable/icon_zp_arm2" app:layout_constraintBottom_toBottomOf="@id/lineTop2" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <View android:id="@id/lineTop" android:layout_width="wrap_content" android:layout_height="0.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHeight_percent="0.5" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <ImageView android:id="@id/ivType" android:background="@drawable/bg_zp_3" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <com.qianhe.yct.view.ArmView android:id="@id/ivArm" android:layout_width="wrap_content" android:layout_height="wrap_content" app:imageResId="@drawable/icon_zp_arm" app:layout_constraintBottom_toBottomOf="@id/lineTop" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" />
+                <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginStart="10.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+                    <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/tvProTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="16.0dip" android:textColor="@color/text_black" android:id="@id/tvStartDistance" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <com.qianhe.yct.view.map.MapContainerView android:id="@id/mapContainer" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+                <com.qh.xcad.XCadView android:id="@id/cadView" android:background="#ffffffff" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivMapState" android:background="@drawable/bg_gray_light_round_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="15.0dip" android:src="@drawable/sel_btn_map_show" />
+            <ImageView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ivSound" android:background="@drawable/bg_gray_light_round_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="15.0dip" android:src="@drawable/sel_btn_sound" />
+            <LinearLayout android:orientation="vertical" android:id="@id/lltBtn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/ivStartPoint" android:background="@drawable/bg_gray_light_round_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="15.0dip" android:src="@drawable/icon_start_point" />
+                <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivResetLocation" android:background="@drawable/bg_gray_light_round_bg" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/icon_current_position" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

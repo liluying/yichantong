@@ -1,0 +1,9 @@
+{
+  "apk": "/workspace/yct-restored/build/yct-restored-debug.apk",
+  "sha256": "c60cf21eb51ee79292818834265d29af4356dd60b877ea5eda565abc546a4b5e",
+  "classes": 12358,
+  "manifest_components_present": 88,
+  "native_libraries_unchanged": 26,
+  "zip_crc": "passed",
+  "limitations": "Static rebuild checks only; no Android installation or hardware validation"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fltChoice" android:background="@drawable/bg_bottom_nav" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <FrameLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/fltCreate" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivCreate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_create" />
+                    <TextView android:textSize="16.0dip" android:textColor="@color/sel_theme_color" android:layout_gravity="center" android:id="@id/tvCreate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/create" />
+                </FrameLayout>
+                <FrameLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/fltJoin" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivJoin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_join" />
+                    <TextView android:textSize="16.0dip" android:textColor="@color/sel_theme_color" android:layout_gravity="center" android:id="@id/tvJoin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/join_share" />
+                </FrameLayout>
+                <FrameLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/fltDel" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivDel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_del" />
+                    <TextView android:textSize="16.0dip" android:textColor="@color/sel_theme_color" android:layout_gravity="center" android:id="@id/tvDel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/delete" />
+                </FrameLayout>
+                <FrameLayout android:gravity="center_horizontal" android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/fltShare" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_horizontal" android:id="@id/ivShare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sel_share" />
+                    <TextView android:textSize="16.0dip" android:textColor="@color/sel_theme_color" android:layout_gravity="center" android:id="@id/tvShare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/share" />
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_gravity="bottom" android:id="@id/fltExecute" android:background="@color/background_nav_bottom_flt_execute" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+            <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvCancel" android:background="@drawable/bg_ripple_round_black" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/cancel" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginEnd="25.0dip" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvConfirm" android:background="@drawable/sel_enabled_theme_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/confirm" android:layout_weight="1.0" android:textAllCaps="false" />
+        </LinearLayout>
+    </FrameLayout>
+</merge>

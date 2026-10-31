@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" package="com.qianhe.yct" platformBuildVersionCode="36" platformBuildVersionName="16">
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.WRITE_CLIPBOARD"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <queries>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+    <permission android:name="com.qianhe.yct.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.qianhe.yct.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:extractNativeLibs="true" android:icon="@mipmap/icon_app" android:label="@string/app_name" android:name="com.qianhe.yct.application.YCTApplication" android:roundIcon="@mipmap/icon_app" android:supportsRtl="true" android:theme="@style/Theme.YCT" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBvFHTog2bei9kJ4p14vJE4fjLXGFNz_Bw"/>
+        <activity android:exported="true" android:launchMode="standard" android:name="com.qianhe.yct.SplashActivity" android:screenOrientation="behind" android:theme="@style/Theme.Splash.Launch" android:windowDisablePreview="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="com.qianhe.LAUNCH_FLOATING_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.MainActivity" android:screenOrientation="behind">
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.ProjectListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.EngineeringListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.EngineeringCreateActivity" android:screenOrientation="behind"/>
+        <activity android:exported="true" android:launchMode="singleTask" android:name="com.qianhe.yct.activity.share.ShareCreateActivity" android:screenOrientation="portrait"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.share.ShareJoinActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.ShareListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.zhaoping.ZhaoPingCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.shuapo.ShuaPoCreateActivity" android:screenOrientation="behind"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTop" android:name="com.qianhe.yct.activity.BluetoothBondActivity" android:screenOrientation="behind" android:theme="@style/BondActivityTheme"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.BluetoothActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.MultiBluetoothExampleActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.debug.DebugActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.UserManageActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.UserLoginActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.CreateAccountActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.ModifyInfoActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.LoginedDeviceManageActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.debug.BluetoothDebugActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.zhaoping.ZhaoPingWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.shuapo.ShuaPoWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.wagou.WaGouCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.dike.DikeCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.line.LineCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.wagou.WaGouWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.dike.DikeWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.line.LineWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.CADPreviewActivity" android:screenOrientation="behind"/>
+        <activity android:name="com.qianhe.yct.activity.CADEntityChooseActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.TestCadActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.ZeroingActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.excavator.ExcavatorCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.excavator.ExcavatorDetailActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.RTKInfoActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.DealerActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.DiffDataConfigActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.LocateInfoActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.pointlib.PointGroupListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.PointListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.pointlib.PointGroupCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.pointlib.PointDetailsActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.basestation.BaseStationConfigActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.basestation.BaseStationWorkModeConfigActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.basestation.BaseStationDataLinkConfigActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.basestation.BaseStationNetworkLinkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.LogviewActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.ExcavatorListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.BucketListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.ConverParamsListActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.ConverParamsCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.BucketCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.debug.DebugUpgradefmwActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.CollectCoordsActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.AppConfigActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.AboutAppActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.PrivacyPolicyActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.polyline.PolyLineCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.polyline.MultiplePointDetailActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.polyline.PolyLineWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.onepointarea.OnePointAreaCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.onepointarea.OnePointAreaWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.threepointarea.ThreePointAreaCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.threepointarea.ThreePointAreaWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.siteleveling.SiteLevelingCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.siteleveling.SiteLevelingWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.arabitraryline.ArbitrarylineCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.arabitraryline.ArbitrarylineWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.verifyaccuracy.VerifyAccuracyActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.verifyaccuracy.BucketFineTuneActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.curvedslope.CurvedSlopeCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.curvedslope.CurvedSlopeWorkActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.multipointarea.MultiPointAreaCreateActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.multipointarea.MultiPointAreaWorkActivity" android:screenOrientation="behind"/>
+        <activity android:clearTaskOnLaunch="true" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:screenOrientation="behind" android:stateNotNeeded="true" android:theme="@style/zxing_CaptureTheme" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.CorsRenewActivity" android:screenOrientation="behind"/>
+        <activity android:launchMode="singleTask" android:name="com.qianhe.yct.activity.OrderRecordListActivity" android:screenOrientation="behind"/>
+        <activity android:exported="true" android:name="com.qianhe.yct.wxapi.WXPayEntryActivity" android:screenOrientation="behind" android:taskAffinity="com.qianhe.yct" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wxa4332aa71e109153"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="com.qianhe.yct.wxapi.WXEntryActivity" android:screenOrientation="behind" android:taskAffinity="com.qianhe.yct" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.qianhe.yct.service.BluetoothConnectService" android:stopWithTask="true"/>
+        <provider android:authorities="com.qianhe.yct.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <activity android:label="@string/lfile_Back" android:name="com.leon.lfilepickerlibrary.ui.LFilePickerActivity" android:screenOrientation="behind"/>
+        <provider android:authorities="com.qianhe.yct.contextprovider" android:exported="false" android:name="com.cmcc.sy.hap.inner.ApplicationProvider"/>
+        <service android:exported="false" android:name="com.qh.xcad.XCadParseService" android:process=":cad_parse"/>
+        <activity android:exported="false" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:theme="@style/EasyPermissions.Transparent"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.qianhe.yct.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

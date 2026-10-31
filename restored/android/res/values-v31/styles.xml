@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Splash" parent="@style/Theme.Splash.Launch">
+        <item name="android:windowBackground">@drawable/bg_wel_en</item>
+        <item name="android:textViewStyle">@style/Widget.YCT.TextView</item>
+        <item name="android:windowSplashScreenBackground">@drawable/bg_wel_en</item>
+        <item name="fontFamily">@font/msyh</item>
+    </style>
+    <style name="Theme.Splash_XFIX" parent="@style/Theme.Splash.Launch">
+        <item name="android:windowBackground">@drawable/bg_wel_xfix</item>
+        <item name="android:textViewStyle">@style/Widget.YCT.TextView</item>
+        <item name="android:windowSplashScreenBackground">@drawable/bg_wel_xfix</item>
+        <item name="fontFamily">@font/msyh</item>
+    </style>
+    <style name="Theme.Splash_ZH" parent="@style/Theme.Splash.Launch">
+        <item name="android:windowBackground">@drawable/bg_wel_zh</item>
+        <item name="android:textViewStyle">@style/Widget.YCT.TextView</item>
+        <item name="android:windowSplashScreenBackground">@drawable/bg_wel_zh</item>
+        <item name="fontFamily">@font/msyh</item>
+    </style>
+</resources>

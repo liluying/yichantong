@@ -1,0 +1,19 @@
+.class public interface abstract Lcom/qianhe/yct/adapter/ExcavatorSelectDialogAdapter$OnItemClickListener;
+.super Ljava/lang/Object;
+.source "ExcavatorSelectDialogAdapter.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/qianhe/yct/adapter/ExcavatorSelectDialogAdapter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "OnItemClickListener"
+.end annotation
+
+
+# virtual methods
+.method public abstract onItemClick(ILcom/qianhe/baselib/bean/ExcavatorEntity;)V
+.end method

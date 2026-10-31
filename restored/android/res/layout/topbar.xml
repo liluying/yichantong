@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@color/background_top_bar" android:layout_width="fill_parent" android:layout_height="60.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/lltBackTb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dip">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/ivBackTb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_back" />
+                <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/ivLogo" android:visibility="gone" android:layout_width="70.0dip" android:layout_height="wrap_content" android:src="@drawable/icon_topbar_logo_ch" />
+                    <TextView android:textSize="10.0dip" android:textColor="@color/text_black" android:ellipsize="start" android:gravity="center" android:id="@id/tvSn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/ivLogo" android:layout_alignStart="@id/ivLogo" android:layout_alignEnd="@id/ivLogo" />
+                    <TextView android:textSize="14.0dip" android:textColor="@color/theme" android:ellipsize="end" android:gravity="center" android:id="@id/tvDemoTip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/demo" android:lines="1" android:layout_below="@id/ivLogo" android:layout_alignStart="@id/ivLogo" android:layout_alignEnd="@id/ivLogo" />
+                    <TextView android:textSize="14.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tvTitle" android:layout_width="70.0dip" android:layout_height="wrap_content" android:maxLines="3" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/lltLocate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10.0dip">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0dip" android:textColor="@color/sel_text_black_and_red" android:ellipsize="end" android:gravity="center" android:id="@id/tvRtkState" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:maxLines="2" />
+                    </LinearLayout>
+                    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+                        <TextView android:textSize="14.0dip" android:textColor="@color/sel_text_black_and_red" android:gravity="center" android:id="@id/tvDiffDelay" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lltStar" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_weixing" />
+                            <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0dip" android:textColor="@color/text_black" android:gravity="center_vertical" android:id="@id/tvUseStars" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:drawablePadding="5.0dip" android:layout_marginStart="2.0dip" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+                <RelativeLayout android:id="@id/rltRMS" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="10.0dip">
+                    <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0dip" android:textColor="@color/sel_text_black_and_red" android:gravity="center_vertical" android:id="@id/tvHRMS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:singleLine="true" android:layout_centerHorizontal="true" />
+                    <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0dip" android:textColor="@color/sel_text_black_and_red" android:gravity="center_vertical" android:id="@id/tvVRMS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/loading" android:singleLine="true" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+                <RelativeLayout android:orientation="vertical" android:id="@id/lltInsState" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="10.0dip">
+                    <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0dip" android:textColor="@color/sel_text_black_and_red" android:gravity="center_vertical" android:id="@id/tvInsState" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:maxLines="2" android:layout_centerHorizontal="true" />
+                    <androidx.appcompat.widget.AppCompatTextView android:textSize="14.0dip" android:textColor="@color/sel_text_black_and_red" android:gravity="center_horizontal" android:id="@id/tvAngle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/loading" android:singleLine="true" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center_horizontal" android:id="@id/lltBatt" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="10.0dip" android:layout_marginEnd="3.0dip">
+                    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:gravity="center_vertical" android:id="@id/ivBattIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_zpy_batt_h5pro" android:layout_centerVertical="true" />
+                        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="2.0dip" android:layout_toEndOf="@id/ivBattIcon">
+                            <FrameLayout android:id="@id/fltIvbatt" android:background="@drawable/bg_batt" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <androidx.appcompat.widget.AppCompatTextView android:textSize="10.0dip" android:textColor="@color/text_black" android:gravity="center" android:layout_gravity="center" android:id="@id/tvZpyBatt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="2.0dip" android:paddingEnd="3.0dip" />
+                            </FrameLayout>
+                            <pl.droidsonroids.gif.GifImageView android:layout_gravity="center_vertical" android:id="@id/gifCharging" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/icon_charging_gif" />
+                        </FrameLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@id/rltSensorBatt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                        <ImageView android:id="@id/ivSensorBattIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_sensor_batt" android:layout_centerVertical="true" />
+                        <FrameLayout android:background="@drawable/bg_batt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="2.0dip" android:layout_toEndOf="@id/ivSensorBattIcon">
+                            <androidx.appcompat.widget.AppCompatTextView android:textSize="10.0dip" android:textColor="@color/text_black" android:gravity="center" android:layout_gravity="center" android:id="@id/tvSensorBatt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="2.0dip" android:paddingEnd="3.0dip" />
+                        </FrameLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvGotoConnect" android:background="@color/black" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/click_to_connect_bluetooth" />
+    </RelativeLayout>
+    <View android:layout_gravity="bottom" android:background="@color/line" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</FrameLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/topBar" layout="@layout/titlebar" />
+    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/name" android:layout_marginStart="20.0dip" />
+    <androidx.core.widget.NestedScrollView android:id="@id/nsv" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="15.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_round_white" android:paddingTop="10.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+                <androidx.appcompat.widget.AppCompatTextView android:enabled="true" android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tvGauss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gauss_coordinate" />
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                        <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/easting" />
+                        <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": " />
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/tvEast" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                        <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/northing" />
+                        <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": " />
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/tvNorth" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/bg_round_white" android:paddingTop="10.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+                <androidx.appcompat.widget.AppCompatTextView android:enabled="true" android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/tvGeodetic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/geodetic_coordinates" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                            <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lon" />
+                            <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": " />
+                            <androidx.appcompat.widget.AppCompatTextView android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/tvLon" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" />
+                        </LinearLayout>
+                        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                            <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lat" />
+                            <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": " />
+                            <androidx.appcompat.widget.AppCompatTextView android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/tvLat" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:paddingStart="5.0dip" android:paddingEnd="5.0dip">
+                        <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elev" />
+                        <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=": " />
+                        <androidx.appcompat.widget.AppCompatTextView android:textSize="20.0dip" android:textColor="@color/text_black" android:id="@id/tvElev" android:background="@null" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:layout_marginStart="25.0dip" android:layout_marginEnd="25.0dip">
+        <TextView android:textSize="20.0dip" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tvFinish" android:background="@drawable/bg_ripple_round_black" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="@string/close" android:layout_weight="1.0" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,132 @@
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Temurin-21.0.8+9 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.8+9 (build 21.0.8+9-LTS, mixed mode)
+INFO  Using log config file: jar:file:/workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Framework/Generic/lib/Generic.jar!/generic.log4j.xml (LoggingInitialization)  
+INFO  Using log file: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/application.log (LoggingInitialization)  
+INFO  Loading user preferences: /workspace/apk-analysis/tools/config/agent-ghidra/ghidra_11.4.2_PUBLIC/preferences (Preferences)  
+INFO  Searching for classes... (ClassSearcher)  
+INFO  Class search complete (1346 ms) (ClassSearcher)  
+INFO  Initializing SSL Context (SSLContextInitializer)  
+INFO  Initializing Random Number Generator... (SecureRandomFactory)  
+INFO  Random Number Generator initialization complete: NativePRNGNonBlocking (SecureRandomFactory)  
+INFO  Trust manager disabled, cacerts have not been set (ApplicationTrustManagerFactory)  
+INFO  Headless startup complete (2752 ms) (AnalyzeHeadless)  
+INFO  Class searcher loaded 58 extension points (18 false positives) (ClassSearcher)  
+INFO  HEADLESS Script Paths:
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/JVM/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Base/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FunctionID/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/8051/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/FileFormats/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/GnuDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger-rmi-trace/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/VersionTracking/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/DATA/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/DecompilerDependent/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Jython/ghidra_scripts
+    /workspace/yct-restored/scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/Decompiler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PDB/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SwiftDemangler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/SystemEmulation/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Debug/Debugger/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/PIC/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/MicrosoftCodeAnalyzer/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/WildcardAssembler/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BytePatterns/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Processors/Atmel/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/BSim/ghidra_scripts
+    /workspace/apk-analysis/tools/ghidra_11.4.2_PUBLIC/Ghidra/Features/PyGhidra/ghidra_scripts (HeadlessAnalyzer)  
+INFO  HEADLESS: execution starts (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/apk-analysis/tools/ghidra-projects/yctdevice (HeadlessAnalyzer)  
+INFO  Creating project: /workspace/apk-analysis/tools/ghidra-projects/yctdevice (DefaultProject)  
+INFO  REPORT: Processing input files:  (HeadlessAnalyzer)  
+INFO       project: /workspace/apk-analysis/tools/ghidra-projects/yctdevice (HeadlessAnalyzer)  
+INFO  IMPORTING: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libyctdevice.so (HeadlessAnalyzer)  
+INFO  Using Loader: Executable and Linking Format (ELF) (AutoImporter)  
+INFO  Using Language/Compiler: AARCH64:LE:64:v8A:default (AutoImporter)  
+INFO  Using Library Search Path: [., /bin, /lib, /lib64, /lib/x86_64-linux-gnu, /lib/aarch64-linux-gnu, /usr/bin, /usr/lib, /usr/X11R6/bin, /usr/X11R6/lib, /usr/java/packages/lib, /usr/lib64] (AutoImporter)  
+INFO  Additional info:
+Loading file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libyctdevice.so?MD5=57f471627a942373379e48bdfec67855...
+Setting block .data.rel.ro to read-only
+Setting block .fini_array to read-only
+Setting block .init_array to read-only
+Setting block .dynamic to read-only
+------------------------------------------------
+
+Linking the External Programs of 'libyctdevice.so' to imported libraries...
+  [libandroid.so] -> not found in project
+  [liblog.so] -> not found in project
+  [libc.so] -> not found in project
+  [libm.so] -> not found in project
+  [libdl.so] -> not found in project
+  [libgnssparser.so] -> not found in project
+------------------------------------------------
+
+Resolving External Symbols of [/libyctdevice.so] - 346 unresolved symbols, no external libraries configured - skipping
+ (AutoImporter)  
+INFO  IMPORTING: Loaded 0 additional files (HeadlessAnalyzer)  
+INFO  ANALYZING all memory and code: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libyctdevice.so (HeadlessAnalyzer)  
+INFO  DWARF external debug information found: ExternalDebugInfo [filename=null, crc=0, hash=c92a4a23a1bb6ead9b148557a13276ccbf88dab2] (ExternalDebugFileSectionProvider)  
+INFO  Unable to find DWARF information, skipping DWARF analysis (DWARFAnalyzer)  
+INFO  Packed database cache: /tmp/agent-ghidra/packed-db-cache (PackedDatabaseCache)  
+INFO  Applied data type archive: generic_clib_64 (ApplyDataArchiveAnalyzer)  
+INFO  -----------------------------------------------------
+    AARCH64 ELF PLT Thunks                     2.218 secs
+    ASCII Strings                              1.165 secs
+    Apply Data Archives                        1.404 secs
+    Basic Constant Reference Analyzer         49.244 secs
+    Call Convention ID                        18.319 secs
+    Call-Fixup Installer                       0.370 secs
+    Create Address Tables                      1.901 secs
+    Create Address Tables - One Time           1.834 secs
+    Create Function                            0.043 secs
+    DWARF                                      0.008 secs
+    Data Reference                             3.256 secs
+    Decompiler Switch Analysis                12.357 secs
+    Demangler GNU                              4.438 secs
+    Disassemble                                0.002 secs
+    Disassemble Entry Points                  25.987 secs
+    Embedded Media                             0.190 secs
+    External Entry References                  0.177 secs
+    Function Start Search                      0.880 secs
+    Function Start Search After Code           0.893 secs
+    Function Start Search After Data           0.781 secs
+    Function Start Search delayed - One Time   0.003 secs
+    GCC Exception Handlers                    17.067 secs
+    Non-Returning Functions - Discovered       4.842 secs
+    Non-Returning Functions - Known            0.039 secs
+    Reference                                  4.202 secs
+    Shared Return Calls                        3.549 secs
+    Stack                                     57.855 secs
+    Subroutine References                      2.145 secs
+-----------------------------------------------------
+     Total Time   215 secs
+-----------------------------------------------------
+ (AutoAnalysisManager)  
+INFO  REPORT: Analysis succeeded for file: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libyctdevice.so (HeadlessAnalyzer)  
+SignApk.java:1: error: package com.android.apksig does not exist
+import com.android.apksig.*;
+^
+SignApk.java:9: error: package ApkVerifier does not exist
+   ApkVerifier.Result r=new ApkVerifier.Builder(new File(args[1])).build().verify();
+              ^
+SignApk.java:9: error: package ApkVerifier does not exist
+   ApkVerifier.Result r=new ApkVerifier.Builder(new File(args[1])).build().verify();
+                                       ^
+SignApk.java:18: error: package ApkSigner does not exist
+  ApkSigner.SignerConfig c=new ApkSigner.SignerConfig.Builder("local-debug",key,certs).build();
+           ^
+SignApk.java:18: error: package ApkSigner.SignerConfig does not exist
+  ApkSigner.SignerConfig c=new ApkSigner.SignerConfig.Builder("local-debug",key,certs).build();
+                                                     ^
+SignApk.java:19: error: package ApkSigner does not exist
+  new ApkSigner.Builder(List.of(c)).setInputApk(new File(args[1])).setOutputApk(new File(args[2])).setMinSdkVersion(21).setV1SigningEnabled(true).setV2SigningEnabled(true).setV3SigningEnabled(true).build().sign();
+               ^
+skipping /workspace/yct-restored/scripts/SignApk.java
+INFO  SCRIPT: /workspace/yct-restored/scripts/ExportAlgorithms.java (HeadlessAnalyzer)  
+INFO  ExportAlgorithms.java> EXPORT_RESULT ok=141 failed=0 skipped=33193 (GhidraScript)  
+INFO  ANALYZING changes made by post scripts: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libyctdevice.so (HeadlessAnalyzer)  
+INFO  REPORT: Post-analysis succeeded for file: file:///workspace/apk-analysis/output/extracted/lib/arm64-v8a/libyctdevice.so (HeadlessAnalyzer)  
+INFO  REPORT: Save succeeded for: /libyctdevice.so (yctdevice:/libyctdevice.so) (HeadlessAnalyzer)  
+INFO  REPORT: Import succeeded (HeadlessAnalyzer)  

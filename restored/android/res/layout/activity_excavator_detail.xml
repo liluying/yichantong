@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/main" android:background="@color/bg_base" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/topBar" layout="@layout/topbar" />
+    <androidx.cardview.widget.CardView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="8.0dip" app:cardElevation="0.0dip" app:cardUseCompatPadding="false">
+        <com.qianhe.yct.view.HdImageView android:id="@id/iv" android:layout_width="fill_parent" android:layout_height="wrap_content" app:src="@drawable/icon_excavator_all" />
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="15.0dip" android:layout_weight="1.0" android:overScrollMode="never">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/bg_round_white" android:paddingTop="15.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="16.0dip" android:paddingEnd="16.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/name" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" : " />
+                <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <androidx.appcompat.widget.AppCompatEditText android:textSize="20.0dip" android:textColor="@color/text_black" android:textColorHint="@color/text_hint" android:gravity="start|center" android:id="@id/edtName" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/please_enter_the_name" android:singleLine="true" android:textDirection="locale" android:textAlignment="viewStart" android:paddingStart="15.0dip" android:paddingEnd="45.0dip" />
+                    <ImageView android:layout_gravity="end|center" android:id="@id/ivReset" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_reset" android:layout_marginEnd="12.0dip" />
+                </FrameLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/unit" />
+                <TextView android:textSize="20.0dip" android:textColor="@color/text_black" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" : " />
+                <com.qianhe.yct.view.UnitDropdownView android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/unitDropdownSensor" android:layout_width="wrap_content" android:layout_height="wrap_content" app:enabled="false" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/lltMode1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="AH:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvAH" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="AR:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvAR" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="AL:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvAL" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="LR:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvLR_mode1" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/lltMode23" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="HA:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvHA" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="pq:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvPq" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <include android:id="@id/bucketParams" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/layout_excavator_detail_bucket_params" />
+                <LinearLayout android:orientation="horizontal" android:id="@id/lltAy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="A1y:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvAy" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/lltAx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Ax:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvAx" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/lltDx" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Dx:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvDx" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="AD:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvAD" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="BC:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvBC" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="CD:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvCD" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/lltBD" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                    <TextView android:textSize="20.0dip" android:textStyle="bold" android:textColor="@color/text_black" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="BD:" android:layout_marginEnd="15.0dip" />
+                    <FrameLayout android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <com.qianhe.yct.view.NumericEditText android:enabled="false" android:textSize="20.0dip" android:textColor="@color/sel_edittext_enable" android:layout_gravity="center_vertical" android:id="@id/tvBD" android:background="@null" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:maxLength="12" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:id="@id/tvSave" android:background="@drawable/bg_ripple_round_theme" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:text="@string/save" android:textAllCaps="false" android:layout_marginStart="25.0dip" android:layout_marginEnd="25.0dip" />
+</LinearLayout>

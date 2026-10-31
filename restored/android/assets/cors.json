@@ -1,0 +1,91 @@
+[
+  {
+    "corsName": "XFIX",
+    "host": "base.xfix-gnss.com",
+    "port": 6060,
+    "cgcs2000_port": 0,
+    "wgs84_port": 0,
+    "itrf2008_port": 0
+  },
+  {
+    "corsName": "中国移动",
+    "host": "sdk.pnt.10086.cn",
+    "mountpoint": "RTCM33_GRCEJ",
+    "mountpoint_3star": "RTCM33_GRC",
+    "mountpoint_5star": "RTCM33_GRCEJ",
+    "wgs84_port": 8002,
+    "cgcs2000_port": 8001,
+    "itrf2008_port": 8003
+  },
+  {
+    "corsName": "腾讯",
+    "host": "cors.tencent.com",
+    "mountpoint": "RTCM32_GRECJ2",
+    "mountpoint_3star": "RTCM32_GRC",
+    "mountpoint_5star": "RTCM32_GRECJ2",
+    "wgs84_port": 8002,
+    "cgcs2000_port": 8003,
+    "itrf2008_port": 0
+  },
+  {
+    "corsName": "千寻",
+    "host": "rtk.ntrip.qxwz.com",
+    "mountpoint": "AUTO",
+    "mountpoint_3star": "RTCM33_GGB",
+    "mountpoint_5star": "AUTO",
+    "wgs84_port": 8002,
+    "cgcs2000_port": 8003,
+    "itrf2008_port": 8001
+  },
+  {
+    "corsName": "六分",
+    "host": "vrs.sixents.com",
+    "mountpoint": "RTCM33_GRECJ2",
+    "mountpoint_3star": "RTCM33_GRC4",
+    "mountpoint_5star": "RTCM33_GRECJ2",
+    "wgs84_port": 8002,
+    "cgcs2000_port": 8003,
+    "itrf2008_port": 0
+  },
+  {
+    "corsName": "真点",
+    "host": "pnt.true-point.com",
+    "mountpoint": "RTCM33GRCEJ",
+    "mountpoint_3star": "RTCM33GRC",
+    "mountpoint_5star": "RTCM33GRCEJ",
+    "wgs84_port": 8102,
+    "cgcs2000_port": 8103,
+    "itrf2008_port": 8101
+  },
+  {
+    "corsName": "伽利略",
+    "host": "rtk.kplgnss.com",
+    "mountpoint": "RTCM33GRCEJpro",
+    "mountpoint_3star": "RTCM33GRCpro",
+    "mountpoint_5star": "RTCM33GRCEJ",
+    "wgs84_port": 8002,
+    "cgcs2000_port": 8003,
+    "itrf2008_port": 8001
+  },
+  {
+    "corsName": "云图",
+    "host": "gnss.ytcors.cn",
+    "mountpoint": "RTCM33GRCEJpro",
+    "mountpoint_3star": "RTCM33GRCpro",
+    "mountpoint_5star": "RTCM33GRCEJ",
+    "wgs84_port": 8002,
+    "cgcs2000_port": 8003,
+    "itrf2008_port": 0
+  },
+  {
+    "corsName": "华测",
+    "host": "rtk.huacenav.com",
+    "mountpoint": "RTCM33",
+    "mountpoint_3star": "",
+    "mountpoint_5star": "RTCM33",
+    "wgs84_port": 8002,
+    "cgcs2000_port": 8001,
+    "itrf2008_port": 8003
+  }
+]
+

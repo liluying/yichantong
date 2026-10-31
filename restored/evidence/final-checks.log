@@ -1,0 +1,104 @@
+make: Entering directory '/workspace/yct-restored/native'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/workspace/yct-restored/native'
+{
+  "passed_cases": 7535,
+  "failed_cases": 0,
+  "original": "/workspace/yct-restored/android/lib/arm64-v8a/libexcavator.so",
+  "method": "Original ARM64 instruction emulation vs compiled recovered C; explicit libc/libm hooks",
+  "functions": [
+    "libexcavator_init",
+    "libexcavator_get_mode",
+    "libexcavator_tool_check",
+    "libexcavator_tool_from_distance",
+    "libexcavator_get_tool",
+    "libexcavator_version",
+    "libexcavator_set_tool",
+    "libexcavator_tool_to_binary",
+    "libexcavator_tool_from_binary",
+    "libexcavator_cali_mode_1_0"
+  ],
+  "limits": "Does not validate real equipment or other native functions"
+}
+{'passed_cases': 500, 'failed_cases': 0, 'successful_calibrations': 113, 'function': 'libexcavator_cali_mode_2_0', 'method': 'Full 312-byte native state compared against original ARM64, using numeric tolerance'}
+{'passed_cases': 500, 'failed_cases': 0, 'successful_calibrations': 127, 'function': 'libexcavator_cali_mode_3_0', 'method': 'Full 312-byte native state compared against original ARM64, using numeric tolerance'}
+{
+  "passed_cases": 840,
+  "failed_cases": 0,
+  "functions": [
+    "FourParamTransform",
+    "SevenParamTransform",
+    "ComputeFourParameters"
+  ],
+  "method": "Original ARM64 libyctdevice.so numeric paths versus compiled C",
+  "limits": "Scale-zero/degenerate logging paths and seven-parameter estimation are not covered"
+}
+{
+  "apk": "/workspace/yct-restored/build/yct-restored-debug.apk",
+  "sha256": "6ff80b60d98b32158e6001f0ef9c7330122f5ca8a45ef81602124c859b14f6b0",
+  "classes": 12358,
+  "manifest_components_present": 88,
+  "native_libraries_unchanged": 26,
+  "zip_crc": "passed",
+  "limitations": "Static rebuild checks only; no Android installation or hardware validation"
+}
+[
+  {
+    "abi": "arm64-v8a",
+    "original_api_count": 21,
+    "recovered": [
+      "libexcavator_cali_mode_1_0",
+      "libexcavator_cali_mode_2_0",
+      "libexcavator_cali_mode_3_0",
+      "libexcavator_get_mode",
+      "libexcavator_get_tool",
+      "libexcavator_init",
+      "libexcavator_set_tool",
+      "libexcavator_tool_check",
+      "libexcavator_tool_from_binary",
+      "libexcavator_tool_from_distance",
+      "libexcavator_tool_to_binary",
+      "libexcavator_version"
+    ],
+    "forwarded": [
+      "libexcavator_adjust_hab_vertical",
+      "libexcavator_adjust_height",
+      "libexcavator_adjust_rtk",
+      "libexcavator_cali_mode_1_1",
+      "libexcavator_cali_mode_2_1",
+      "libexcavator_from_binary",
+      "libexcavator_get_height_stdev",
+      "libexcavator_get_rtk_stdev",
+      "libexcavator_to_binary"
+    ]
+  },
+  {
+    "abi": "armeabi-v7a",
+    "original_api_count": 21,
+    "recovered": [
+      "libexcavator_cali_mode_1_0",
+      "libexcavator_cali_mode_2_0",
+      "libexcavator_cali_mode_3_0",
+      "libexcavator_get_mode",
+      "libexcavator_get_tool",
+      "libexcavator_init",
+      "libexcavator_set_tool",
+      "libexcavator_tool_check",
+      "libexcavator_tool_from_binary",
+      "libexcavator_tool_from_distance",
+      "libexcavator_tool_to_binary",
+      "libexcavator_version"
+    ],
+    "forwarded": [
+      "libexcavator_adjust_hab_vertical",
+      "libexcavator_adjust_height",
+      "libexcavator_adjust_rtk",
+      "libexcavator_cali_mode_1_1",
+      "libexcavator_cali_mode_2_1",
+      "libexcavator_from_binary",
+      "libexcavator_get_height_stdev",
+      "libexcavator_get_rtk_stdev",
+      "libexcavator_to_binary"
+    ]
+  }
+]

@@ -1,0 +1,145 @@
+.class Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity$4;
+.super Ljava/lang/Object;
+.source "BaseStationWorkModeConfigActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;->onCreate(Landroid/os/Bundle;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;
+
+
+# direct methods
+.method constructor <init>(Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;)V
+    .locals 0
+
+    .line 122
+    iput-object p1, p0, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity$4;->this$0:Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onClick(Landroid/view/View;)V
+    .locals 3
+
+    .line 125
+    iget-object p1, p0, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity$4;->this$0:Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;
+
+    invoke-static {p1}, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;->-$$Nest$fgetdiffFormats(Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;)[Ljava/lang/String;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    .line 126
+    new-instance p1, Lcom/qianhe/yct/dialog/ChooseListDialogFragment;
+
+    invoke-direct {p1}, Lcom/qianhe/yct/dialog/ChooseListDialogFragment;-><init>()V
+
+    .line 127
+    iget-object v0, p0, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity$4;->this$0:Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;
+
+    invoke-virtual {v0}, Landroidx/fragment/app/FragmentActivity;->getSupportFragmentManager()Landroidx/fragment/app/FragmentManager;
+
+    move-result-object v0
+
+    const-string v1, "ChooseListDialogFragment"
+
+    invoke-virtual {p1, v0, v1}, Landroidx/fragment/app/DialogFragment;->show(Landroidx/fragment/app/FragmentManager;Ljava/lang/String;)V
+
+    .line 128
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+
+    .line 129
+    iget-object v1, p0, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity$4;->this$0:Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;
+
+    sget v2, Lcom/qianhe/yct/R$string;->please_select_differential_type:I
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "title"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 130
+    new-instance v1, Ljava/util/ArrayList;
+
+    iget-object v2, p0, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity$4;->this$0:Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;
+
+    invoke-static {v2}, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;->-$$Nest$fgetdiffFormats(Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;)[Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    .line 131
+    const-string v2, "list"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+
+    .line 132
+    iget-object v2, p0, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity$4;->this$0:Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;
+
+    invoke-static {v2}, Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;->-$$Nest$fgetbinding(Lcom/qianhe/yct/activity/basestation/BaseStationWorkModeConfigActivity;)Lcom/qianhe/yct/databinding/ActivityBasestationWorkmodeBinding;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/qianhe/yct/databinding/ActivityBasestationWorkmodeBinding;->tvDiffType:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {v2}, Landroidx/appcompat/widget/AppCompatTextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result v1
+
+    const-string v2, "currentIndex"
+
+    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
+
+    .line 133
+    const-string v1, "requestKey"
+
+    const-string v2, "basedifftype"
+
+    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 134
+    invoke-virtual {p1, v0}, Landroidx/fragment/app/Fragment;->setArguments(Landroid/os/Bundle;)V
+
+    :cond_0
+    return-void
+.end method

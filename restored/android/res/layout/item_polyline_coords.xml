@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/item" android:background="@drawable/bg_ripple_round_gray_light" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_marginBottom="7.0dip" android:layout_marginStart="7.0dip" android:layout_marginEnd="7.0dip">
+        <TextView android:textSize="16.0dip" android:textColor="@color/text_black" android:id="@id/tvCoordinate" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="15.0dip" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/theme" android:gravity="center" android:id="@id/tvModify" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/modify" android:paddingStart="15.0dip" android:paddingEnd="15.0dip" android:layout_marginStart="15.0dip" />
+        <androidx.appcompat.widget.AppCompatImageView android:id="@id/ivDel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_item_del" android:layout_marginStart="10.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/lltSegmentRatio" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="7.0dip" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip">
+        <TextView android:textSize="14.0dip" android:textColor="@color/text_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/slope_ratio" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_base_gray_round_bg" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="5.0dip" android:paddingEnd="5.0dip" android:layout_marginStart="10.0dip">
+            <com.qianhe.yct.view.NumericEditText android:textSize="16.0dip" android:textColor="@color/sel_edittext_enable" android:id="@id/edtSegmentRatio" android:background="@null" android:padding="6.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:hint="@string/negative_for_downhill" android:singleLine="true" android:maxLength="12" android:layout_weight="1.0" app:supportNegative="true" />
+            <androidx.appcompat.widget.AppCompatTextView android:textSize="16.0dip" android:textColor="@color/sel_edittext_enable" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="%" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
